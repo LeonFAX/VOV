@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, MessageSquare, Send, User, AtSign, 
+  MessageSquare, Send, User, AtSign, 
   CheckCircle, AlertCircle, Upload, X, FileImage, Loader2, Link2 
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
