@@ -1,9 +1,8 @@
-import { useTranslation } from 'react-i18next';
+
 import { Shield, Lock, Eye, Database, Mail, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function PrivacyPage() {
-  const { t } = useTranslation();
 
   const sections = [
     {
