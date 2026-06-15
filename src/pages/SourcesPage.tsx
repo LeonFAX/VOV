@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+
 import { motion } from 'framer-motion';
 import { BookOpen, ExternalLink, FileText, Archive, Globe } from 'lucide-react';
 import { FadeInOnScroll } from '@/components/ParallaxSection';
@@ -14,7 +14,6 @@ interface SourceCategory {
 }
 
 export function SourcesPage() {
-  const { t } = useTranslation();
 
   const categories: SourceCategory[] = [
     {
