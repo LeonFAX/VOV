@@ -125,21 +125,7 @@ function HeroSection() {
 
 function StatsSection() {
   const { t } = useTranslation();
-  const heroes = useTranslatedHeroes();
 
-  // Calculate real stats from heroes data
-  const stats = useMemo(() => {
-    const totalHeroes = heroes.length;
-    const heroesOfUSSR = heroes.filter(h =>
-      h.awards?.some((a: any) => {
-        const name = typeof a === 'string' ? a : a.name || '';
-        return name.includes('Герой Советского Союза');
-      })
-    ).length;
-    const totalAwards = heroes.reduce((sum, h) => sum + (h.awards?.length || 0), 0);
-    const uniquePlaces = new Set(heroes.map(h => h.birthPlace).filter(Boolean)).size;
-    return { totalHeroes, heroesOfUSSR, totalAwards, uniquePlaces };
-  }, [heroes]);
 
   return (
     <section className="pt-8 pb-0 bg-[#FAF6F0]">
