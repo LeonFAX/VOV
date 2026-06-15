@@ -5,7 +5,6 @@ import { ArrowLeft, Save, X, Plus, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useTranslation } from 'react-i18next';
 import { useContentStore } from '@/store';
 import type { Hero, Award } from '@/types';
 
@@ -27,7 +26,6 @@ type HeroFormData = {
 export function HeroEditPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { t } = useTranslation('pages');
   const { heroes, updateHero } = useContentStore();
   
   const hero = heroes.find(h => String(h.id) === String(id));
