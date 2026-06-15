@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import { Lock, BookOpen, MessageSquare, Star, Clock, Shield, MapPin, ChevronRight, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function Footer() {
-  const { t } = useTranslation();
+  
 
   const footerLinks = [
     {
