@@ -1,0 +1,678 @@
+{
+  "events": {
+    "1": {
+      "title": "Beginning of the Great Patriotic War",
+      "description": "At 4 a.m. on June 22, 1941, without declaring war, German troops attacked the Soviet Union. The Great Patriotic War began."
+    },
+    "2": {
+      "title": "Battle of Moscow",
+      "description": "The largest battle in which Soviet troops for the first time stopped and pushed back German troops."
+    },
+    "3": {
+      "title": "Siege of Leningrad",
+      "description": "The siege of Leningrad by German and Finnish troops lasted 872 days."
+    },
+    "4": {
+      "title": "Battle of Stalingrad",
+      "description": "The turning point in the war. Encirclement and capitulation of Paulus' 6th Army."
+    },
+    "5": {
+      "title": "Battle of Kursk",
+      "description": "The largest tank battle in history. The final turning point in the war."
+    },
+    "6": {
+      "title": "Operation Bagration",
+      "description": "The largest strategic operation to liberate Belarus. Complete destruction of Army Group Center."
+    },
+    "7": {
+      "title": "Defense of Brest Fortress",
+      "description": "Heroic defense of Brest Fortress. The defenders fought for 28 days against superior enemy forces."
+    },
+    "8": {
+      "title": "Liberation of Kiev",
+      "description": "Kiev offensive operation. Liberation of the capital of Ukraine."
+    },
+    "9": {
+      "title": "Battle for the Dnieper",
+      "description": "Forced crossing of the Dnieper and creation of bridgeheads on the right bank."
+    },
+    "10": {
+      "title": "Liberation of Vienna",
+      "description": "Vienna offensive operation. Liberation of the capital of Austria."
+    },
+    "11": {
+      "title": "Storming of Berlin",
+      "description": "Berlin offensive operation. The final battle of the war in Europe."
+    },
+    "12": {
+      "title": "Battle for the Caucasus",
+      "description": "Novorossiysk defensive operation. Defense of the Caucasus and liberation of the Taman Peninsula."
+    },
+    "13": {
+      "title": "Battle for Sevastopol",
+      "description": "The defense of Sevastopol lasted 250 days. The Red Army and the Black Sea Fleet fought heroically for the city."
+    },
+    "14": {
+      "title": "Operation Iskra",
+      "description": "Breakthrough of the Leningrad blockade. Restoration of land communication with the city."
+    },
+    "15": {
+      "title": "Defense of Odessa",
+      "description": "The heroic defense of Odessa lasted 73 days. Evacuation of troops and population by sea."
+    },
+    "16": {
+      "title": "Victory Parade",
+      "description": "The historic Victory Parade on Red Square in Moscow."
+    },
+    "17": {
+      "title": "Industrial Evacuation to the Urals",
+      "description": "Evacuation of over 1,500 industrial enterprises to the country's rear areas. Creation of new defense plants."
+    },
+    "18": {
+      "title": "Artillery Bombardment of Berlin",
+      "description": "Massive artillery bombardment of Berlin before the assault. Over 40,000 guns were deployed."
+    },
+    "19": {
+      "title": "Battle of Rzhev",
+      "description": "Rzhev-Vyazma strategic operation. The largest series of battles on the central direction."
+    },
+    "20": {
+      "title": "Relocation of Troops to the Kursk Bulge",
+      "description": "Massive transfer of troops and equipment in preparation for defense on the Kursk Bulge."
+    },
+    "21": {
+      "title": "Artillery Preparation near Kursk",
+      "description": "Counter-battery combat on the first day of the Battle of Kursk. Simultaneous salvo of thousands of guns."
+    },
+    "22": {
+      "title": "Defense of Tula",
+      "description": "Defense of Tula — a key defensive node on the southern approach to Moscow."
+    },
+    "23": {
+      "title": "Strategic Meeting in Stalino",
+      "description": "Military council of the Southwestern Front. Decision on the defense of Kiev."
+    },
+    "24": {
+      "title": "Transfer of the 5th Tank Army",
+      "description": "Secret relocation of the 5th Tank Army for Operation Uranus near Stalingrad."
+    },
+    "25": {
+      "title": "Shelling of Leningrad by \"Dora\"",
+      "description": "Shelling of Leningrad by German super-heavy artillery, including the 800mm \"Dora\" gun."
+    },
+    "26": {
+      "title": "Defense of Murmansk",
+      "description": "Defense of Murmansk and the Kirov Railway. The only supply port under Lend-Lease."
+    },
+    "27": {
+      "title": "Liberation of Kharkov",
+      "description": "Liberation of Kharkov during the Belgorod-Kharkov operation."
+    },
+    "28": {
+      "title": "Strategic Offensive on Orel",
+      "description": "Orel strategic offensive operation. Liberation of Orel and Kursk region."
+    },
+    "29": {
+      "title": "Occupation of Minsk",
+      "description": "Minsk occupied by German troops. Beginning of underground resistance."
+    },
+    "30": {
+      "title": "Strategic Operation on the Dnieper",
+      "description": "Crossing the Dnieper and battles for bridgeheads. The largest fortification operation."
+    },
+    "31": {
+      "title": "Relocation of Aviation to Kuban",
+      "description": "Mass transfer of aviation regiments to forward airfields in Kuban."
+    },
+    "32": {
+      "title": "Artillery Barrage near Orel",
+      "description": "Massive artillery salvo before the start of the Orel operation."
+    },
+    "33": {
+      "title": "Demyansk Operation",
+      "description": "Demyansk offensive operation. Attempt to encircle the Demyansk grouping of the enemy."
+    },
+    "34": {
+      "title": "Strategic Decision on Counteroffensive",
+      "description": "The Stavka of the Supreme Command decides to go on the counteroffensive near Moscow."
+    },
+    "35": {
+      "title": "Luftwaffe Bombing of Stalingrad",
+      "description": "Massive air raid on Stalingrad. 600 bombers destroyed the city."
+    },
+    "36": {
+      "title": "Liberation of Minsk",
+      "description": "Minsk liberated during Operation Bagration. Encirclement of the 4th and 9th Wehrmacht armies."
+    },
+    "37": {
+      "title": "Vistula-Oder Operation",
+      "description": "Vistula-Oder strategic operation. Liberation of Poland and advance to the Oder."
+    },
+    "38": {
+      "title": "Relocation to the Far East",
+      "description": "Transfer of troops from the western front to the Far East for the war with Japan."
+    },
+    "39": {
+      "title": "Defense of Smolensk",
+      "description": "Smolensk battle. Two-month defense delayed the advance on Moscow."
+    },
+    "40": {
+      "title": "Capitulation of Germany",
+      "description": "Unconditional capitulation of Nazi Germany. Victory Day."
+    }
+  },
+  "heroes": {
+    "georgiy-zhukov": {
+      "name": "Georgy Zhukov",
+      "rank": "Marshal of the Soviet Union",
+      "feat": "Under Zhukov's command, Soviet troops won key victories of the war.",
+      "middleName": ""
+    },
+    "konstantin-rokosovsky": {
+      "name": "Konstantin Rokossovsky",
+      "rank": "Marshal of the Soviet Union",
+      "feat": "Commanded troops in the Battle of Stalingrad and Operation Bagration.",
+      "middleName": ""
+    },
+    "ivan-konev": {
+      "name": "Ivan Konev",
+      "rank": "Marshal of the Soviet Union",
+      "feat": "Commanded the 1st Ukrainian Front, liberated Auschwitz.",
+      "middleName": ""
+    },
+    "aleksandr-vasilevsky": {
+      "name": "Aleksandr Vasilevsky",
+      "rank": "Marshal of the Soviet Union",
+      "feat": "Chief of the General Staff, planned Operation Bagration.",
+      "middleName": ""
+    },
+    "vasiliy-chuikov": {
+      "name": "Vasily Chuikov",
+      "rank": "Marshal of the Soviet Union",
+      "feat": "Defended Stalingrad, commander of the 62nd Army.",
+      "middleName": ""
+    },
+    "aleksandr-pokryshkin": {
+      "name": "Aleksandr Pokryshkin",
+      "rank": "Marshal of Aviation",
+      "feat": "Three-time Hero of the Soviet Union, flying ace with 59 victories.",
+      "middleName": ""
+    },
+    "ivan-kozhedub": {
+      "name": "Ivan Kozhedub",
+      "rank": "Marshal of Aviation",
+      "feat": "Three-time Hero of the Soviet Union, top Soviet ace with 62 victories.",
+      "middleName": ""
+    },
+    "leonid-brezhnev": {
+      "name": "Leonid Brezhnev",
+      "rank": "General Lieutenant",
+      "feat": "Political commissar on multiple fronts.",
+      "middleName": ""
+    },
+    "grigoriy-rechkalov": {
+      "name": "Grigory Rechkalov",
+      "rank": "Colonel",
+      "feat": "56 aerial victories, twice Hero of the Soviet Union.",
+      "middleName": ""
+    },
+    "nikolay-kuznetsov": {
+      "name": "Nikolai Kuznetsov",
+      "rank": "Senior Lieutenant",
+      "feat": "Undercover intelligence operative, eliminated 11 Nazi officials.",
+      "middleName": ""
+    }
+  },
+  "monuments": {
+    "1": {
+      "name": "Brest Fortress Memorial Complex",
+      "location": "Brest, Brest Region, Belarus"
+    },
+    "2": {
+      "name": "Mound of Glory",
+      "location": "Minsk Region, 21 km from Minsk, Belarus"
+    },
+    "3": {
+      "name": "Khatyn Memorial Complex",
+      "location": "Logoisk District, Minsk Region, Belarus"
+    },
+    "4": {
+      "name": "Partisan Glory Memorial Complex",
+      "location": "Leninsky District, Minsk Region, Belarus"
+    },
+    "5": {
+      "name": "\"Yama\" Memorial",
+      "location": "Minsk, Melnikayte Lane, 6, Belarus"
+    },
+    "6": {
+      "name": "\"Buinichskoye Pole\" Memorial Complex",
+      "location": "Mogilev District, Mogilev Region, Belarus"
+    },
+    "7": {
+      "name": "\"The Motherland Calls!\"",
+      "location": "Volgograd, Mamayev Kurgan, Russia"
+    },
+    "8": {
+      "name": "Piskarevskoye Memorial Cemetery",
+      "location": "St. Petersburg, Nepokoryonnykh Ave., 72, Russia"
+    },
+    "9": {
+      "name": "Poklonnaya Gora",
+      "location": "Moscow, Kutuzovsky Prospekt, 55, Russia"
+    },
+    "10": {
+      "name": "Sapun Gora Memorial Complex",
+      "location": "Sevastopol, Balaklava District, Russia"
+    },
+    "11": {
+      "name": "Treptower Park",
+      "location": "Berlin, Treptow District, Germany"
+    },
+    "12": {
+      "name": "Soviet War Memorial in Tiergarten",
+      "location": "Berlin, Tiergarten, Germany"
+    },
+    "13": {
+      "name": "Babiy Yar",
+      "location": "Kyiv, Dorogozhitskaya St., 1a, Ukraine"
+    },
+    "14": {
+      "name": "Museum of the History of the Great Patriotic War",
+      "location": "Kyiv, Lavrskaya St., 24, Ukraine"
+    },
+    "15": {
+      "name": "Majdanek",
+      "location": "Lublin, Poland"
+    },
+    "16": {
+      "name": "Auschwitz-Birkenau",
+      "location": "Oswiecim, Lesser Poland Voivodeship, Poland"
+    },
+    "17": {
+      "name": "Riga Liberators Monument",
+      "location": "Riga, Victory Park, Latvia"
+    },
+    "18": {
+      "name": "Avala Mountain Monument",
+      "location": "Belgrade, Avala Mountain, Serbia"
+    },
+    "19": {
+      "name": "28 Panfilov Guardsmen Park",
+      "location": "Almaty, Kazakhstan"
+    },
+    "20": {
+      "name": "\"Rubezh Slavy\" Memorial",
+      "location": "Volokolamsk District, Moscow Region, Russia"
+    }
+  },
+  "letters": {
+    "gryaznyh-ivan-1941": {
+      "author": "Ivan Gryaznykh",
+      "recipient": "wife Polya",
+      "preview": "Send the children by train deep into the country. There's nothing for them here."
+    },
+    "sadyrin-vasiliy-1941": {
+      "author": "Vasily Sadyrin",
+      "recipient": "wife Vera",
+      "preview": "I've been trampling Siberian black earth for 6 days, sleeping on a long coat."
+    },
+    "shohin-aleksey-1941": {
+      "author": "Alexey Shokhin",
+      "recipient": "wife Maria",
+      "preview": "Alive and well, though not without a wound. The bullet went through my left arm."
+    },
+    "kuznetsov-petr-1941": {
+      "author": "Petr Kuznetsov",
+      "recipient": "mother Anna Petrovna",
+      "preview": "We stand near Moscow, digging dugouts, artillery is in position. We're pushing them back."
+    },
+    "borisov-nikolay-1942": {
+      "author": "Nikolai Borisov",
+      "recipient": "sister Tatyana",
+      "preview": "Minus thirty outside, we're in felt boots and greatcoats — we endure."
+    },
+    "makarov-fedor-1942": {
+      "author": "Fyodor Makarov",
+      "recipient": "wife Klavdiya",
+      "preview": "Moved through forests and swamps, letters weren't accepted. Yesterday caught a hare."
+    },
+    "volkov-dmitriy-1942": {
+      "author": "Dmitry Volkov",
+      "recipient": "father Andrey Matveevich",
+      "preview": "Learning to be a tanker, mastering the T-34. The machine is powerful, Father!"
+    },
+    "semenov-grigoriy-1942": {
+      "author": "Grigory Semenov",
+      "recipient": "wife Praskovya",
+      "preview": "The most difficult letter. I'm going into battle tomorrow. If I don't return — remember me."
+    },
+    "egorov-mihail-1942": {
+      "author": "Mikhail Egorov",
+      "recipient": "mother Elena",
+      "preview": "I received your parcel. The black bread tastes like home. Thank you, Mom."
+    },
+    "alekseev-sergey-1943": {
+      "author": "Sergey Alekseev",
+      "recipient": "wife Lida",
+      "preview": "We are crossing the Dnieper. The water is cold, but we must push forward."
+    },
+    "novikov-ivan-1943": {
+      "author": "Ivan Novikov",
+      "recipient": "brother Alexey",
+      "preview": "The Kursk salient. Our artillery fires day and night. The earth trembles."
+    },
+    "kozlov-andrey-1943": {
+      "author": "Andrey Kozlov",
+      "recipient": "fiancée Natasha",
+      "preview": "Forgive me for the long silence. We are advancing. I will return to you."
+    },
+    "petrov-aleksandr-1943": {
+      "author": "Alexander Petrov",
+      "recipient": "father",
+      "preview": "Liberated a Ukrainian village today. People cried when they saw us."
+    },
+    "morozov-vasiliy-1943": {
+      "author": "Vasily Morozov",
+      "recipient": "wife Klavdiya",
+      "preview": "Autumn in Ukraine. Roads are mud, but our spirits are high."
+    },
+    "sokolov-ilya-1944": {
+      "author": "Ilya Sokolov",
+      "recipient": "mother",
+      "preview": "We entered Belarus. Villages burned, but people greet us with bread and salt."
+    },
+    "popov-konstantin-1944": {
+      "author": "Konstantin Popov",
+      "recipient": "wife Anna",
+      "preview": "Approaching the border. I can smell home. Wait for me."
+    },
+    "vasilev-nikolay-1944": {
+      "author": "Nikolay Vasilyev",
+      "recipient": "sister Olga",
+      "preview": "Liberated Minsk. The city is destroyed, but the people are alive and free."
+    },
+    "lebedev-mihail-1944": {
+      "author": "Mikhail Lebedev",
+      "recipient": "father Ivan",
+      "preview": "Poland. The locals help us, feed us. We move westward every day."
+    },
+    "kozirev-viktor-1944": {
+      "author": "Viktor Kozyrev",
+      "recipient": "wife Lyuba",
+      "preview": "Hungarian villages, vineyards. The war will end soon, I feel it."
+    },
+    "smirnov-aleksey-1945": {
+      "author": "Alexey Smirnov",
+      "recipient": "mother",
+      "preview": "We are at the Oder. Berlin is close. The final push."
+    },
+    "andreev-pavel-1945": {
+      "author": "Pavel Andreev",
+      "recipient": "wife Katya",
+      "preview": "Berlin! We stormed the Reichstag. Our flag is on top! Victory!"
+    },
+    "mihaylov-boris-1945": {
+      "author": "Boris Mikhailov",
+      "recipient": "father",
+      "preview": "Victory! We celebrated all night. I am alive and well. Coming home."
+    },
+    "fedorov-georgiy-1945": {
+      "author": "Georgy Fedorov",
+      "recipient": "wife Nina",
+      "preview": "The war is over. I walk through a liberated city. People cry with joy."
+    },
+    "nikitin-sergey-1945": {
+      "author": "Sergey Nikitin",
+      "recipient": "mother",
+      "preview": "Demobilization begins. I'll be home for the harvest. Wait for me."
+    },
+    "tihonov-vladimir-1945": {
+      "author": "Vladimir Tikhonov",
+      "recipient": "wife Zina",
+      "preview": "Returning home. Every kilometer brings me closer to you and our children."
+    }
+  },
+  "letterTexts": {
+    "gryaznyh-ivan-1941": "Polya! I just received your telegram. I sent you a reply by telegraph to send the children by train (children's train) deep into the country. If you send the children to your homeland, you have nothing there, no home, no yard. How will they accommodate the children there, how will they arrange their meals? The food situation is very bad. Besides, your mother is very weak: if she gets sick, the children will be left homeless.",
+    "sadyrin-vasiliy-1941": "Vera, I am on guard duty today. Having free time, I am writing you a letter. For 6 days now I have been trampling the Siberian black earth and sleeping on a long coat. I received all my equipment brand new. Living with tobacco is very difficult, I have never lived like this. I would gladly smoke a cigarette offered by you before going to sleep, but this will probably not happen for a long time.",
+    "shohin-aleksey-1941": "Hello, Mashenka! Alive and well, although not without a wound. The bullet went through my left arm, it is already healing now. Don't worry too much, everything will be fine. The doctors say my arm will be in perfect order. I am writing to you from the hospital, I have been lying here for a week. They feed us well, they even give us white bread. I miss you and the children unbearably. How is Lyoshka, has he recovered?",
+    "kuznetsov-petr-1941": "Dear Mom! The war has been going on for three months now, and I still haven't written to you properly. Forgive me. Alive, whole, lost some weight, but these are trifles. We are standing near Moscow, dugouts are being dug, artillery is in position. The Germans are fighting fiercely, but we are holding them. We are pushing them back, Mom, don't doubt it. How is Father? Please write, does he receive his pension?",
+    "borisov-nikolay-1942": "Hello, Tanyusha! I am writing to you from the trench, sitting on an earth bench, covered with a tent cloth. It is thirty below zero outside, and we are in felt boots and greatcoats — nothing, we endure. Yesterday I received your parcel with mittens and tobacco — thank you very much, sister! I have already put on the mittens, my hands are like in a furnace. The tobacco is also handy, the old one has run out.",
+    "makarov-fedor-1942": "Dear Klavushka, hello! I haven't written for a long time — there was no opportunity. We moved through forests and swamps, letters were not accepted. Now we have stopped for a few days, I decided to write. My health is normal, we don't know hunger — we get food ourselves. Yesterday we caught a hare, cooked soup. It was a delicacy, not like yesterday's bread.",
+    "volkov-dmitriy-1942": "Hello, Dad! Congratulations on Victory Day — although it is early, I believe that this day will come soon. I am now studying to be a tanker, mastering the T-34. The machine is powerful, Dad, you should see it! The Germans won't be happy when we go to the front. They write that things are tough in Stalingrad, but we will help them.",
+    "semenov-grigoriy-1942": "Nadenka, dear! I am writing to you from Stalingrad. The city stands, we stand. The Germans bomb every day, but we are used to it. We live in basements, sleep on boards, but our spirits are strong. Yesterday we shot down two German planes — there was no limit to our joy. Nadia, hold on, dear, everything will end soon. Give my regards to my mother-in-law and the children.",
+    "egorov-mihail-1942": "Anuta, hello! Happy holiday — the 25th anniversary of the Great October! Today we celebrated in the trench, the commander gave out 100 grams each. We drank to Stalin, to the Motherland, to Victory. The fighting spirit is high, Anyutka. The Germans in Stalingrad are already in the cauldron, we will finish them off soon. How is our Kolenka? Has he already started school? I kiss you tightly, my dear.",
+    "alekseev-sergey-1943": "Dear Mom! Happy February 23rd! Happy Red Army Day! I am writing to you from the hospital in Tashkent. My leg is healing well, the doctors are great. After Stalingrad I was sent here for treatment. Mom, don't worry, everything will be fine. The weather is warm here, they sell fruits, it doesn't feel like war at all. How is the garden? Did Father sow the winter crops?",
+    "novikov-ivan-1943": "Hello, Praskovya! Spring has come, the earth has come to life, but we are still in the same place. But we don't get bored — there is a lot of work. Yesterday I received your parcel with pies and lard, although everything arrived crumpled, but I am happy as a child anyway. I shared the pies with my comrades, everyone licked their fingers. Thank you, my dear housewife, for your care.",
+    "kozlov-andrey-1943": "Vitya, brother! I am writing to you from the Kursk Bulge. The fighting is no joke, but we are pushing them, Vityok, pushing! Tank battles are such that words cannot describe. Our artillery works magnificently — the 'Katyushas' sing, the Germans run. I am alive and unharmed, don't worry. How is your work at the factory? Is the production going to the front?",
+    "petrov-aleksandr-1943": "Katyusha, dear! Great news — Stalingrad has been completely liberated! We are driving the enemy west, he is fleeing, abandoning equipment. I saw a shot-down German 'Messerschmitt' — lying in the field like a dead bird. Our spirits are high, Katya, the war will end soon, I believe it. How is our Mashenka? Has she started first grade? Please write.",
+    "morozov-vasiliy-1943": "Luda, hello! Happy October anniversary! Last year we celebrated in the trenches near Stalingrad, and this year — already on the Dnieper. We forced the crossing under fire, but we managed. Many guys died, I remember each one. The lucky ones survived. I am writing to you from a liberated village, the owners are crying with joy, feeding us like family. Luda, home soon, I feel it.",
+    "sokolov-ilya-1944": "Olenka, my golden one! We celebrated the New Year in the trench, but not without spirit — the commander gave out a portion of stew and 50 grams each. We drank to Victory next year, to ours, to those who did not live to see it. I miss you unbearably, Olya. Every night before bed I see your image, hear your voice. Take care of yourself, dear, we will see each other soon.",
+    "popov-konstantin-1944": "Valyusha, happy March 8th, my dear! Sorry I can't give you flowers — maybe just dandelions from the trench that have bloomed now. I congratulate you on the holiday of all women. You are my heroine — you keep the house, raise the children, wait for me. I am proud of you, Valyusha. I will return soon and personally congratulate you every day.",
+    "vasilev-nikolay-1944": "Tomochka, exactly three years ago this war began. Three years I haven't seen you and the children. But today we have a holiday — we started a big offensive, we are beating the Germans so hard! Our tanks are moving forward, infantry behind them. I believe, Toma, that everything will be over by winter. Tell the children that Dad will come home soon.",
+    "lebedev-mihail-1944": "Dear Mom! I am writing to you from Poland, from the liberated city of Lublin. The Poles rejoice at us as liberators, throw flowers at our feet, treat us to bread and salt. I am whole, healthy, not wounded. The war, Mom, is coming to an end, the Germans are running to their Germany. I will be home soon, Mom, soon.",
+    "kozirev-viktor-1944": "Galochka, dear! We are celebrating the New Year 1945 in East Prussia! Behind us is Poland, ahead is Germany. The Germans are resisting fiercely, but we are breaking them. Yesterday we took a small town, found a warehouse with wine — the commander allowed 100 grams per person. We drank to the New Year, to a speedy Victory, to you, dear ones, who stayed at home.",
+    "smirnov-aleksey-1945": "Raya, happy Valentine's Day, although it is not our holiday! I am writing to you from East Prussia, sitting in a German house by the stove — after the trenches this is simply paradise. The owners fled, leaving everything. I even tried to play the piano, it turned out badly, but my comrades laughed from the heart. Raechka, I will be home in the spring, I swear to you.",
+    "andreev-pavel-1945": "Zinochka, happy March 8th! This time my gift is special — yesterday I was awarded the Medal 'For Courage'. The commander personally presented it, all the guys applauded. I stood as if on parade, my hands trembling. I won't tell you why I was awarded — it's a secret, but believe me, it is deserved. I kiss you tightly, my heroine, wait for me a little longer.",
+    "mihaylov-boris-1945": "Irochka, hello! We are on the approaches to Berlin, you could say we can already see its outskirts. Artillery thunders without stopping, the sky is in smoke. But everyone's spirits are high — the end is near, Irina, the very end. Yesterday our planes bombed the city all day. Soon, dear, all this will end soon.",
+    "fedorov-georgiy-1945": "Dear Mom! Berlin has fallen! We raised the red banner on the Reichstag! Mommy, I am crying with joy, writing to you, and tears are falling on the paper. Three years I walked to this moment. Do you remember how in '41 you saw me off at the station? You were crying then, and I was joking. Mom, we have won! I will be home soon, I kiss you tightly.",
+    "nikitin-sergey-1945": "Lyubochka! Victory! The war is over! Today the act of Germany's capitulation was signed! Everyone is crying, everyone is hugging, shooting into the air. I stand and cannot believe — it's over. Three years, nine months and one day. Lyuba, I am alive, whole, I will come home soon. Wait for me, dear, I am already packing my things.",
+    "tihonov-vladimir-1945": "Ksyusha, hello! The war in Europe is over, but we have been sent to the Far East — to fight the Japanese. We traveled across the whole country by train, the views are incredible. We have arrived at our destination, preparing for the operation. Ksyusha, I am writing to you just in case — if anything happens, know that I loved you with all my soul. But nothing will happen, we will deal with them quickly. I kiss you."
+  },
+  "awards": {
+    "Четырежды Герой Советского Союза": "Four times Hero of the Soviet Union",
+    "Дважды Герой Советского Союза": "Twice Hero of the Soviet Union",
+    "Герой Советского Союза": "Hero of the Soviet Union",
+    "Орден Ленина": "Order of Lenin",
+    "Орден «Победа»": "Order of Victory",
+    "Орден Красного Знамени": "Order of the Red Banner",
+    "Орден Суворова I степени": "Order of Suvorov, 1st Class",
+    "Орден Кутузова I степени": "Order of Kutuzov, 1st Class",
+    "Орден Красной Звезды": "Order of the Red Star",
+    "Орден Отечественной войны I степени": "Order of the Patriotic War, 1st Class",
+    "Орден Отечественной войны II степени": "Order of the Patriotic War, 2nd Class",
+    "Орден Александра Невского": "Order of Alexander Nevsky",
+    "Орден Богдана Хмельницкого I степени": "Order of Bogdan Khmelnitsky, 1st Class",
+    "Орден «Знак Почета»": "Order of the Badge of Honour",
+    "медаль «За отвагу»": "Medal \"For Courage\"",
+    "медаль «За боевые заслуги»": "Medal \"For Battle Merit\"",
+    "Медаль «За оборону Москвы»": "Medal \"For the Defense of Moscow\"",
+    "Медаль «За оборону Сталинграда»": "Medal \"For the Defense of Stalingrad\"",
+    "Медаль «За победу над Германией»": "Medal \"For Victory over Germany\"",
+    "Медаль «За оборону Кавказа»": "Medal \"For the Defense of the Caucasus\"",
+    "Орден Октябрьской Революции": "Order of the October Revolution",
+    "Британский орден Бани": "Order of the Bath"
+  },
+  "heroBiographies": {
+    "georgiy-zhukov": "Georgy Konstantinovich Zhukov (1896–1974) — outstanding Soviet military commander, Marshal of the Soviet Union (1943), four times Hero of the Soviet Union (1939, 1944, 1945, 1956). Born in the village of Strelkovka, Kaluga Governorate, in a peasant family. In World War I served in the cavalry, during the Civil War fought on the Eastern Front against Kolchak. In 1939 commanded Soviet forces in the battles at Khalkhin Gol, achieving a decisive victory over the Japanese Kwantung Army. From the beginning of the Great Patriotic War — member of the Stavka of the Supreme High Command. In September–October 1941 organized the defense of Leningrad. From October 1, 1941 commanded the Western Front and led the counteroffensive near Moscow — the Red Army's first major victory. In November 1942 as Stavka representative coordinated Operation Uranus to encircle Paulus's 6th Army at Stalingrad. In summer 1943 directed the Battle of Kursk — the largest tank battle in history. In January–February 1945 commanded the Vistula-Oder operation, breaking through German defenses for 500 km. From April 16 to May 2, 1945 directed the Berlin operation, accepting the capitulation of German forces on May 8, 1945 in Karlshorst.",
+    "konstantin-rokosovsky": "Konstantin Konstantinovich Rokossovsky (1896–1968) — Soviet military commander, Marshal of the Soviet Union (1944), twice Hero of the Soviet Union (1944, 1945). Born in Warsaw in a railway worker's family. In World War I served in artillery, during the Civil War fought in the Far East against Kolchak. In 1937 was arrested on charges of 'Polish espionage,' imprisoned until 1940. After release became commander of the 5th Mechanized Corps. From the beginning of the war — commander of the 9th Army, then Bryansk Front. In September 1942 appointed commander of the Don Front, later renamed Stalingrad Front.",
+    "aleksandr-vasilevsky": "Alexander Mikhailovich Vasilevsky (1895–1977) — Soviet military commander, Marshal of the Soviet Union (1943), Chief of the General Staff of the Red Army (1942–1945), twice Hero of the Soviet Union (1944, 1945). Born in the village of Novaya Golchikha, Kineshma district, Ivanovo Governorate, in a priest's family. In World War I — company commander, in the Civil War — battalion commander. In 1937–1940 — head of the Operations Directorate of the General Staff. In June 1941 — head of the Operations Directorate, then deputy Chief of the General Staff. From June 1942 — Chief of the General Staff and member of the Stavka. Coordinated planning of all major operations.",
+    "ivan-konev": "Ivan Stepanovich Konev (1897–1973) — Soviet military commander, Marshal of the Soviet Union (1944), twice Hero of the Soviet Union (1944, 1945). Born in the village of Lodeynoye, Talonsky district, Vologda Governorate, in a peasant family. In World War I — artilleryman, in the Civil War fought on the Eastern Front against Kolchak and Ataman Semyonov. In 1938–1940 — commander of the Mongolian Group of Soviet Forces. From the beginning of the Great Patriotic War — commander of the 19th Army on the Western Front, then commanded the North-Western and Kalinin Fronts. From July 1943 — commander of the Steppe Front.",
+    "leonid-brezhnev": "Leonid Ilyich Brezhnev (1906–1982) — Soviet statesman and party leader, General Secretary of the CPSU Central Committee (1964–1982). During the war — head of the Political Department of the Southern Front, then the 4th Ukrainian Front, lieutenant general. Born in Yekaterinoslav Governorate (now Dnipropetrovsk region). Before the war — metallurgical engineer, party official in Dnipropetrovsk and Zaporizhzhia. From 1941 — at the front. From August 1941 — deputy, then head of the Political Department of the Southern Front. From October 1943 — head of the Political Department of the 4th Ukrainian Front.",
+    "vasiliy-chuikov": "Vasily Ivanovich Chuikov (1900–1982) — Soviet military commander, Marshal of the Soviet Union (1955), twice Hero of the Soviet Union (1944, 1945). Born in the village of Serebryanye Prudy, Kursk Governorate, in a peasant family. During the Civil War fought on the Southern Front against Wrangel. Before the war — military advisor in China, commander of the 4th Army in Belarus. In July 1941 — commander of the 9th Army on the South-Western Front. From September 1942 — commander of the 62nd Army defending Stalingrad. From 1943 — commander of the 8th Guards Army.",
+    "ivan-kozhedub": "Ivan Nikitovich Kozhedub (1920–1991) — Soviet fighter ace, three times Hero of the Soviet Union (1944, 1945, 1985), Marshal of Aviation (1985). Born in the village of Obrazhiyevka, Chernihiv region, in a peasant family. In 1941 graduated from the Chuhuiv Military Aviation School. From March 1943 — at the front, in the 240th fighter aviation regiment. First victory on July 6, 1943, downing a Ju-87 over Kursk.",
+    "aleksandr-pokryshkin": "Alexander Ivanovich Pokryshkin (1913–1985) — Soviet fighter ace, three times Hero of the Soviet Union (1943, 1943, 1944), Marshal of Aviation (1972). Born in Novonikolaevsk (now Novosibirsk) in a working-class family. From 1933 — in aviation. Before the war — flight instructor at the Orenburg Aviation School. In 1941 — deputy commander of a squadron in the 16th fighter aviation regiment on the Southern Front. First victory on June 22, 1941 — on the first day of the war.",
+    "grigoriy-rechkalov": "Grigory Andreevich Rechkalov (1922–1994) — Soviet fighter pilot, twice Hero of the Soviet Union (1943, 1944), colonel. Born in the settlement of Kholmy, Sverdlovsk region, in a working-class family. In 1940 graduated from the Chelyabinsk Aviation School. From June 1942 — at the front, in the 29th Guards Fighter Aviation Regiment. First victory on June 29, 1942, shooting down an Me-109 over Stalingrad.",
+    "nikolay-kuznetsov": "Nikolai Vasilyevich Kuznetsov (1911–1944) — undercover intelligence officer, Hero of the Soviet Union (posthumously, 1947). Born in the village of Zyryanka, Tomsk Governorate, in a peasant family. In 1938 graduated from the NKVD school. From 1939 — in the Rovno (Ukraine) residency, operating under the guise of German officer Paul Siebert. Spoke German fluently, knew Wehrmacht customs."
+  },
+  "heroFeats": {
+    "georgiy-zhukov": "Under Zhukov's command, Soviet forces achieved key victories of the war. In the Battle of Moscow (December 5, 1941 – January 7, 1942) his forces pushed the Germans 100–250 km from the capital. In the Battle of Stalingrad (August 1942 – February 1943) he coordinated three fronts, encircling Paulus's 330,000-strong group. In the Battle of Kursk (July–August 1943) he directed the counteroffensive on the Orel-Kursk axis. In Operation Bagration (June–August 1944) Zhukov's front liberated Poland to the Vistula line. In the Berlin Operation (April 16 – May 2, 1945) his 1st Belorussian Front took the Reichstag, hoisting the Victory Banner on April 30, 1945.",
+    "konstantin-rokosovsky": "Rokossovsky commanded the Don (Stalingrad) Front in November 1942 – February 1943, directing Operation Uranus to encircle the 300,000-strong Paulus group. In February 1943 his front conducted Operation Ring — liquidating the pocket. From April 1944 — commander of the 1st Belorussian Front. In summer 1944 conducted Operation Bagration, liberating Belarus and eastern Poland. In January–May 1945 participated in the Vistula-Oder and Berlin operations. At the Victory Parade on June 24, 1945 on Red Square commanded the front's combined regiment. After the war — Minister of Defense of Poland (1949–1956), then Deputy Minister of Defense of the USSR.",
+    "aleksandr-vasilevsky": "As Chief of the General Staff, Vasilevsky participated in planning all major operations of the war. In November 1942 he developed the plan for Operation Uranus — encircling the 6th Army at Stalingrad, coordinating three fronts. In 1943 coordinated the Battle of Kursk — the largest tank battle in history. From February 1944 — commander of the 3rd Belorussian Front, liberating Belarus and East Prussia. From March 1945 — commander of the Far Eastern Front. In August–September 1945 directed the Manchurian operation, crushing the Kwantung Army in 24 days. On September 2, 1945 accepted the capitulation of the Kwantung Army in Harbin — the final act of World War II.",
+    "ivan-konev": "Konev commanded the Steppe Front in the Battle of Kursk (July 1943), where his forces defeated German Army Group South and liberated Belgorod. In August–September 1943 conducted the Donbass operation, liberating Stalino (Donetsk) and Makeevka. From October 1943 — commander of the 2nd Ukrainian Front. In January–February 1944 conducted the Korsun-Shevchenkovsky operation, encircling 10 enemy divisions near Korsun. In July–August 1944 conducted the Lvov-Sandomierz operation, reaching the Vistula. In January 1945 liberated Krakow. In April–May 1945 participated in the Berlin operation, then liberated Prague on May 9, 1945 — the last capital freed by the Red Army.",
+    "leonid-brezhnev": "As head of the front political departments, Brezhnev organized party-political work among the troops. Participated in the defense of the Caucasus (1942) — organized political workers in the difficult conditions of mountain passes. In 1943 participated in the liberation of Donbass, in 1944 — Crimea. In 1944 — head of the Political Department of the 4th Ukrainian Front, which participated in the liberation of Transcarpathia. Four times Hero of the Soviet Union (1944, 1944, 1966, 1978), although military historians question the justification for all four awards — the first two were for administrative work, the last two were political.",
+    "vasiliy-chuikov": "From September 1942 to February 1943, Chuikov commanded the 62nd Army in Stalingrad. His army held the city for 200 days, fighting street battles along a 15 km front. Chuikov developed the tactic of 'close combat' — closing to within 200 meters of the enemy so Germans could not use artillery and aviation due to risk of hitting their own troops. On October 14, 1942 the Germans captured 90% of the city, but the 62nd Army held a bridgehead on the west bank of the Volga 1–2 km wide. In November 1942 the army launched a counteroffensive. In 1944–1945 commanded the 8th Guards Army, liberated Poland, participated in the assault on Berlin.",
+    "ivan-kozhedub": "Kozhedub made 330 combat sorties, conducted 120 aerial battles, shot down 62 aircraft personally and 3 in group. On February 19, 1945 became twice Hero for 62 victories, on August 18, 1945 — three times. His most famous victory: on April 19, 1945 on a La-7 he shot down a Messerschmitt Me 262 jet fighter — the world's first case of a jet aircraft being shot down by a piston fighter. After the war served in fighter aviation, participated in the Korean War (1950–1953), shooting down 2 more American B-29 aircraft (total victories: 64). From 1971 — Deputy Commander-in-Chief of the Air Force for Combat Training.",
+    "aleksandr-pokryshkin": "Pokryshkin made 650 combat sorties, conducted 156 aerial battles, shot down 59 aircraft personally and 6 in group. In April–May 1943 twice became Hero of the Soviet Union for victories in the Kuban (19 victories in April–June 1943). In August 1943 — for the third time. Developed new aerial combat tactics 'altitude-speed-maneuver-motion,' changing Soviet fighter aviation methodology. Commanded the 9th Guards Fighter Aviation Regiment, then the 16th Guards Aviation Division. Participated in the assault on Berlin (April–May 1945). After the war — commander of the 7th Air Army, Deputy Commander-in-Chief of the Air Force. Wrote the book 'Through the Gunsight,' which became a handbook for generations of pilots.",
+    "grigoriy-rechkalov": "Rechkalov made 452 combat sorties, conducted 122 aerial battles, shot down 56 aircraft personally and 6 in group — second best result in the USSR Air Force after Kozhedub. In February 1943 became Hero of the Soviet Union for 12 victories, in July 1944 — second time for 50 victories. Participated in the Battle of Stalingrad, battles on the Kuban, liberation of Crimea (1944), war with Japan (1945). In August 1945 in the Far East shot down 2 Japanese aircraft — total 58 victories. After the war — test pilot, colonel in reserve.",
+    "nikolay-kuznetsov": "Kuznetsov eliminated 11 high-ranking Nazi administration officials: Governor of Galicia Otto Bauer (February 1944), high-ranking SS and police officers. Gathered valuable intelligence on German command plans. On March 9, 1944 in the forest near Rovno he was ambushed by Ukrainian nationalists (UPA). In the shootout he killed three but was mortally wounded. Managed to destroy documents. Buried in Lutsk. In 1947 posthumously awarded the title Hero of the Soviet Union."
+  },
+  "letterContexts": {
+    "gryaznyh-ivan-1941": "Letter from the GASPI KO archive. I.P. Gryaznykh — pilot of the Baltic Fleet, wrote to his wife from Oranienbaum in the second week of the war.",
+    "sadyrin-vasiliy-1941": "Letter from the GASPI KO archive. V.A. Sadyrin — Red Army soldier, wrote from a training camp in Western Siberia.",
+    "shohin-aleksey-1941": "Letter from the TsAMO funds. A.A. Shokhin — infantry sergeant, wounded near Tula in October 1941.",
+    "kuznetsov-petr-1941": "Letter from the Victory Museum collection. P.D. Kuznetsov — artilleryman, participant in the Battle of Moscow.",
+    "borisov-nikolay-1942": "Letter from the GASPI KO archive. N.I. Borisov — infantryman, winter battle near Moscow.",
+    "makarov-fedor-1942": "Letter from the TsAMO funds. F.S. Makarov — partisan of the Bryansk forest, spring 1942.",
+    "volkov-dmitriy-1942": "Letter from the Victory Museum collection. D.A. Volkov — tank school cadet, May 1942.",
+    "semenov-grigoriy-1942": "Letter from the TsAMO archive. G.P. Semenov — defender of Stalingrad, August 1942.",
+    "egorov-mihail-1942": "Letter from the 'Battle of Stalingrad' museum-reserve funds. M.P. Egorov — rifleman of the 62nd Army.",
+    "alekseev-sergey-1943": "Letter from the GASPI KO archive. S.N. Alekseev — wounded near Stalingrad, treated at the Tashkent evacuation hospital.",
+    "novikov-ivan-1943": "Letter from the Victory Museum collection. I.F. Novikov — signalman, Kursk Bulge, spring 1943.",
+    "kozlov-andrey-1943": "Letter from the TsAMO archive. A.V. Kozlov — artilleryman, Battle of Kursk, July 1943.",
+    "petrov-aleksandr-1943": "Letter from the Victory Museum collection. A.I. Petrov — infantryman, liberation of Ukraine, September 1943.",
+    "morozov-vasiliy-1943": "Letter from the TsAMO archive. V.T. Morozov — infantryman, crossing of the Dnieper, November 1943.",
+    "sokolov-ilya-1944": "Letter from the TsAMO funds. I.M. Sokolov — mortar operator, winter 1944 in Belarus.",
+    "popov-konstantin-1944": "Letter from the GASPI KO archive. K.G. Popov — sergeant, spring 1944, preparation for Operation Bagration.",
+    "vasilev-nikolay-1944": "Letter from the Victory Museum collection. N.P. Vasilyev — tankman, Operation Bagration, June 1944.",
+    "lebedev-mihail-1944": "Letter from the TsAMO archive. M.S. Lebedev — infantryman, liberation of Poland, September 1944.",
+    "kozirev-viktor-1944": "Letter from the TsAMO funds. V.A. Kozyrev — artillery officer, East Prussian operation, December 1944.",
+    "smirnov-aleksey-1945": "Letter from the GASPI KO archive. A.D. Smirnov — Red Army soldier, East Prussia, February 1945.",
+    "andreev-pavel-1945": "Letter from the Victory Museum collection. P.S. Andreev — sergeant, awarded the Medal 'For Courage' near Königsberg.",
+    "mihaylov-boris-1945": "Letter from the TsAMO archive. B.P. Mikhailov — artilleryman, Berlin operation, April 1945.",
+    "fedorov-georgiy-1945": "Letter from the TsAMO museum-reserve funds. G.I. Fyodorov — participant in the assault on Berlin, May 2, 1945.",
+    "nikitin-sergey-1945": "Letter from the Victory Museum collection. S.V. Nikitin — infantryman, Victory Day, May 9, 1945, Berlin.",
+    "tihonov-vladimir-1945": "Letter from the TsAMO archive. V.M. Tikhonov — participant in the Soviet-Japanese War, August 1945."
+  },
+  "eventFullTexts": {
+    "1": "On June 22, 1941 at 4:00 AM, German troops attacked the Soviet Union without declaring war. Operation Barbarossa involved 190 divisions (5.5 million troops), 3,500 tanks, 7,000 artillery pieces, and 2,000 aircraft. The German plan aimed to defeat the Red Army within 3-4 months before winter. On the first day, German aviation destroyed over 1,200 Soviet aircraft on the ground. The Great Patriotic War lasted 1,418 days and claimed over 27 million Soviet lives.",
+    "2": "The Battle of Moscow (September 30, 1941 – April 20, 1942) was the largest battle of the war's initial period. The German Army Group Center (over 1.8 million troops, 1,700 tanks) launched Operation Typhoon to capture Moscow. In October-November 1941, German troops reached the city's outskirts at Khimki. On December 5, 1941, Soviet forces under Zhukov launched a counteroffensive, pushing the Germans 100-250 km from the capital. This was the Wehrmacht's first major defeat of World War II.",
+    "3": "The Siege of Leningrad (September 8, 1941 – January 27, 1944) lasted 872 days. German and Finnish forces blockaded the city, cutting off all land connections. Over 1 million residents died from starvation, cold, and shelling. The Road of Life across Lake Ladoga became the city's only supply route. Despite daily shelling and famine, the city continued producing tanks and ammunition. The blockade was broken on January 18, 1943, and fully lifted on January 27, 1944.",
+    "4": "The Battle of Stalingrad (July 17, 1942 – February 2, 1943) became the turning point of the war. The German 6th Army under Paulus (330,000 troops) was encircled by Operation Uranus (November 19-23, 1942). Hitler forbade retreat, promising supply by air. Of the 330,000 encircled soldiers, 147,000 died, and 91,000 surrendered on February 2, 1943, including 24 generals. For the first time, the German army suffered a complete defeat.",
+    "5": "The Battle of Kursk (July 5 – August 23, 1943) was the largest tank battle in history. The German offensive Operation Citadel involved 900,000 troops, 2,700 tanks, and 2,000 aircraft. Soviet forces had built deep defensive lines over 250 km. At Prokhorovka on July 12, over 1,200 tanks clashed. The Soviet counteroffensive on July 12 led to liberation of Orel and Belgorod. The Germans lost over 500,000 troops and could no longer launch strategic offensives on the Eastern Front.",
+    "6": "Operation Bagration (June 23 – August 29, 1944) was the largest strategic operation of the war. Four Soviet fronts (2.4 million troops, 5,200 tanks) attacked German Army Group Center. In six weeks, Soviet forces advanced 600 km, liberated all of Belarus, and destroyed 28 German divisions. Minsk was liberated on July 3. The operation was named after Georgian military commander Pyotr Bagration and was timed to coincide with the Allied landings in Normandy.",
+    "7": "The Defense of Brest Fortress began on June 22, 1941 at 4:15 AM with a surprise German artillery bombardment. The fortress garrison (about 9,000 border guards, soldiers, and officers) was encircled on the first day. Despite being cut off from the outside world, separate groups held out for weeks. The last defenders in the East Fort resisted until July 23 — 32 days. The fortress became the first Hero Fortress of the Soviet Union and a symbol of military valor.",
+    "8": "The Liberation of Kiev occurred on November 6, 1943 during the Kiev Strategic Offensive Operation. After 778 days of occupation, Soviet troops of the 1st Ukrainian Front under Vatutin entered the Ukrainian capital. On November 6, 1943, the Order of the Patriotic War I class was established. Kiev's liberation opened the path for the offensive across Ukraine to the Carpathians.",
+    "9": "The Battle of the Dnieper (August 24 – December 23, 1943) was one of the largest operations of the war. Soviet forces crossed the 700-900 meter wide river under heavy German fire. Over 2.6 million Soviet troops participated. Dozens of bridgeheads were created on the right bank, including the famous Bukryn and Lyutezh bridgeheads near Kiev. The operation involved the largest airborne landing in history — over 4,500 paratroopers.",
+    "10": "The Liberation of Vienna occurred on April 13, 1945 during the Vienna Offensive Operation. The 3rd Ukrainian Front under Tolbukhin captured the Austrian capital after street battles lasting several days. Soviet troops advanced 300 km in 18 days. The Vienna State Opera and St. Stephen's Cathedral survived the battles. The liberation of Austria led to the establishment of an independent democratic state.",
+    "11": "The Battle of Berlin (April 16 – May 2, 1945) was the final major battle in Europe. The 1st and 2nd Belorussian and 1st Ukrainian Fronts (2.5 million troops, 6,250 tanks, 7,500 aircraft) stormed the German capital. On April 30, the Victory Banner was raised over the Reichstag. On May 2, Berlin garrison commander Weidling signed the capitulation. The operation cost the Red Army over 80,000 dead.",
+    "12": "The Battle of the Caucasus (July 25, 1942 – October 9, 1943) was the longest defensive operation. German troops reached the main Caucasus ridge and the approaches to Grozny and Novorossiysk. The defense of the Malaya Zemla bridgehead in Novorossiysk lasted 225 days. Soviet forces recaptured Novorossiysk on September 16, 1943. The German plan to seize Soviet oil fields failed.",
+    "13": "The Defense of Sevastopol lasted 250 days (October 30, 1941 – July 4, 1942). The city was defended by the Coastal Army and Black Sea Fleet forces. Despite German heavy artillery (including the 800mm Dora mortar) and Luftwaffe superiority, the defenders held out for eight months. The last defenders left the city on July 4, 1942. Sevastopol was awarded the title Hero City in 1945.",
+    "14": "Operation Iskra (January 12-30, 1943) broke the Siege of Leningrad. Soviet forces of the Leningrad and Volkhov Fronts (300,000 troops) created a 10-km land corridor to the city. On January 18, 1943, the fronts linked up near the Workers' Settlement No. 1. Railway communication was restored on February 7, 1943. The operation was the first step toward fully lifting the blockade.",
+    "15": "The Defense of Odessa (August 5 – October 16, 1941) lasted 73 days. The Separate Coastal Army and Black Sea Fleet defended the city against German and Romanian forces. During the evacuation by sea, over 350,000 troops and civilians were transported to Sevastopol. Soviet naval aviation and the fleet provided cover. Odessa was awarded the title Hero City in 1945.",
+    "16": "The Victory Parade took place on June 24, 1945 on Red Square in Moscow. Marshal Zhukov reviewed the troops on a white horse. Over 40,000 soldiers participated, including representatives of all fronts. The parade featured captured German banners thrown at the foot of Lenin's Mausoleum. The ceremony symbolized the triumph of the Soviet people over fascism.",
+    "17": "The Evacuation of Industry (July 1941 – March 1942) involved relocating over 1,500 enterprises to the Urals, Siberia, and Central Asia. Over 10 million workers and specialists were evacuated. By March 1942, military production exceeded pre-war levels. The Urals became the arsenal of the front — producing 60% of all Soviet tanks and ammunition. This unprecedented logistical operation saved the country's industrial base.",
+    "18": "The Artillery Barrage of Berlin (April 20 – May 2, 1945) involved over 40,000 artillery pieces. On April 20, 1945 — Hitler's birthday — Soviet artillery began a massive bombardment. Over 1.2 million shells were fired on the first day alone. The barrage destroyed German fortifications and demoralized defenders before the infantry assault. This was the most intensive artillery preparation of the war.",
+    "19": "The Rzhev Battles (January 8, 1942 – March 22, 1943) were the bloodiest series of engagements of the war. Soviet forces conducted four major offensive operations against the German Rzhev salient. Total Soviet losses exceeded 1 million troops. The Germans evacuated the salient in Operation Buffalo (March 1943). The battles tied down German reserves that could have been used at Stalingrad.",
+    "20": "The Relocation to the Kursk Bulge (June 15 – July 4, 1943) involved secretly concentrating Soviet forces. Over 1.3 million troops, 3,600 tanks, and 2,800 aircraft were assembled. Intelligence confirmed German plans for a pincer attack. Soviet forces constructed eight defensive belts with over 3,000 km of trenches, 400,000 minefields, and extensive anti-tank obstacles. The preparations proved decisive in the subsequent battle.",
+    "21": "The Artillery Preparation at Kursk (July 5, 1943) began with a massive counter-battery strike. Soviet intelligence pinpointed the exact moment of the German attack. At 2:20 AM, thousands of Soviet guns opened fire on German assembly areas, disrupting the offensive before it began. Over 3,000 guns and mortars participated in the 30-minute barrage. This was the first time Soviet artillery preempted a German attack.",
+    "22": "The Defense of Tula (October 30 – December 5, 1941) was a critical battle on the southern approaches to Moscow. General Panfilov's troops and Tula workers' militia defended the city for 45 days. Hitler called Tula the 'key to Moscow.' The city was never captured. On December 5, 1941, Soviet forces launched a counteroffensive, pushing the Germans back from the capital's approaches.",
+    "23": "The Strategic Conference at Stalino (August 19, 1941) was a military council of the Southwestern Front. Commanders including Kirponos and Zhukov discussed the defense of Kiev. Despite Zhukov's objections, Stalin ordered Kiev to be held at all costs. The decision led to the encirclement of over 600,000 Soviet troops in the Kiev pocket in September 1941 — the largest encirclement in military history.",
+    "24": "The Secret Relocation of the 5th Tank Army (November 1-18, 1942) was a masterful operational deception. The army was secretly moved 400 km from the Kursk area to Stalingrad. Movement occurred only at night, with complete radio silence. German intelligence failed to detect the transfer. The 5th Tank Army delivered the southern pincer of Operation Uranus, surrounding the German 6th Army.",
+    "25": "The Shelling of Leningrad by 'Dora' (September 1942) involved the world's largest artillery piece — the 800mm railway mortar 'Dora.' Weighing 1,350 tons, it fired 7-ton shells that could penetrate 7 meters of concrete. Dora fired only 48 shells at Leningrad before being withdrawn. The psychological impact exceeded the physical damage. Soviet air strikes eventually damaged the weapon.",
+    "26": "The Defense of Murmansk (June 29 – October 10, 1941) protected the only year-round Arctic port for Lend-Lease supplies. Soviet forces repelled attacks by German Mountain Corps Norway. The port never stopped operating, receiving Allied convoys throughout the war. Over 4 million tons of cargo were delivered via Murmansk. The defense was crucial for maintaining the Soviet war effort.",
+    "27": "The Liberation of Kharkov (August 23, 1943) occurred during the Belgorod-Kharkov Offensive Operation. After 629 days of occupation, the 1st and 5th Guards Tank Armies recaptured Ukraine's second-largest city. This was the third and final battle for Kharkov. The city was destroyed by 70%. The liberation opened the path for the offensive to the Dnieper.",
+    "28": "The Orel Strategic Offensive (July 12 – August 18, 1943) was the northern pincer of the Kursk counteroffensive. The Bryansk and Central Fronts liberated Orel on August 5, 1943 — the first major city freed from German occupation. On the same day, Moscow held the first artillery salute of the war (12 salvos). The operation destroyed 15 German divisions.",
+    "29": "The Occupation of Minsk (June 28, 1941 – July 3, 1944) lasted 1,100 days. The city became the center of Nazi administration for occupied Belarus. A massive underground resistance movement emerged, led by over 100 anti-fascist groups. The Minsk ghetto held over 100,000 Jews, most of whom perished. Minsk was liberated on July 3, 1944 during Operation Bagration.",
+    "30": "The Dnieper Strategic Operation (September 26 – December 20, 1943) involved forcing Europe's third-largest river. Over 2.6 million Soviet troops crossed the Dnieper under heavy fire. More than 20 bridgeheads were established on the right bank. The operation required building improvised crossings under enemy fire. Over 2,400 soldiers were awarded the title Hero of the Soviet Union for this operation alone.",
+    "31": "The Relocation of Aviation to Kuban (April 1-15, 1943) concentrated air power for the spring air battles. Over 900 aircraft were moved to forward airfields. The subsequent air battles over Kuban (April-June 1943) involved up to 400 aircraft simultaneously. Soviet pilots gained air superiority, shooting down over 1,100 German aircraft. This air supremacy proved decisive at Kursk.",
+    "32": "The Artillery Barrage near Orel (July 12, 1943) preceded the Orel offensive with a 30-minute bombardment by 3,000 guns and mortars. Over 100,000 shells were fired in the first hour alone. The barrage destroyed German forward positions and disrupted communications. This was the most powerful artillery preparation of the summer 1943 campaign.",
+    "33": "The Demyansk Operation (January 7 – May 20, 1942) attempted to encircle the German Demyansk salient. Soviet forces surrounded 95,000 German troops in the Demyansk pocket. The Germans maintained supply by air bridge — the first large-scale air supply operation in history. In February 1943, the Germans broke out of the pocket. The operation diverted Soviet forces from other sectors.",
+    "34": "The Decision on Counteroffensive (December 5, 1941) was made by Stavka after assessing the stabilization of the Moscow front. Fresh Siberian divisions, including ski battalions, were brought to the capital. The counteroffensive involved the Kalinin, Western, and Southwestern Fronts. German forces were pushed back 100-250 km. The victory boosted Soviet morale and shattered the myth of German invincibility.",
+    "35": "The Luftwaffe Bombing of Stalingrad (August 23, 1942) was the most devastating single air raid of the war. Over 600 bombers dropped 1,000 tons of bombs on the city in 48 hours. The city was turned into ruins — 40,000 civilians were killed. The Central Station and grain elevator were destroyed. The bombing failed to break the defenders' will.",
+    "36": "The Liberation of Minsk (July 3, 1944) occurred during Operation Bagration. The 1st and 3rd Belorussian Fronts encircled and destroyed the German 4th and 9th Armies near Minsk. Over 100,000 German soldiers were captured. The city was almost completely destroyed after 1,100 days of occupation. The liberation of Minsk effectively liberated all of Belarus.",
+    "37": "The Vistula-Oder Operation (January 12 – February 3, 1945) covered 500 km in 23 days. Three Soviet fronts (2.2 million troops) broke through German defenses and reached the Oder River, 70 km from Berlin. Warsaw was liberated on January 17. Over 295,000 German troops were killed or captured. The operation set the stage for the final assault on Berlin.",
+    "38": "The Relocation to the Far East (June – August 1945) transferred over 500,000 troops from Europe to Manchuria. The Trans-Siberian Railway transported 13 army corps, 1,000 tanks, and 1,500 aircraft. The transfer was completed in three months — a logistical miracle. These forces formed the core of the Far Eastern Front for the Manchurian operation against Japan.",
+    "39": "The Battle of Smolensk (July 10 – September 10, 1941) was the first strategic defensive operation. Soviet forces delayed the German advance on Moscow for two months. The operation involved the Western, Central, and Reserve Fronts. German losses exceeded 250,000 troops. The battle bought crucial time for organizing Moscow's defense.",
+    "40": "Germany's Unconditional Surrender (May 9, 1945) was signed at 00:43 Moscow time in Karlshorst, Berlin. The act was signed by Field Marshal Keitel and representatives of all German armed forces. Over 8 million German soldiers laid down their arms. The war in Europe claimed over 50 million lives, including over 27 million Soviet citizens. May 9 remains Victory Day in Russia, Belarus, and other post-Soviet states."
+  },
+  "birthplaces": {
+    "georgiy-zhukov": "Strelkovka village, Kaluga Governorate",
+    "konstantin-rokosovsky": "Warsaw, Kingdom of Poland",
+    "aleksandr-vasilevsky": "Novaya Golchikha village, Kineshma",
+    "ivan-konev": "Lodeynoye village, Kirov region",
+    "leonid-brezhnev": "Kamenskoye city, Dnipropetrovsk region",
+    "grigoriy-rechkalov": "Srednyaya village, Chelyabinsk region",
+    "vasiliy-chuikov": "Serebryanye Prudy village, Tula region",
+    "nikolay-kuznetsov": "Zyryanovo village, Perm region",
+    "aleksandr-pokryshkin": "Novosibirsk",
+    "ivan-kozhedub": "Obrazhiyivka village, Sumy region"
+  },
+  "monumentDescriptions": {
+    "1": "The largest memorial complex of the Great Patriotic War, dedicated to the heroic defense of Brest Fortress from June 22 to July 23, 1941.",
+    "2": "Memorial complex on a mass grave of more than 11,000 Soviet soldiers who died during the liberation of Minsk in July 1944.",
+    "3": "Memorial in memory of 186 residents of the village of Khatyn burned by the Nazis on March 22, 1943 — a symbol of 618 destroyed Belarusian villages.",
+    "4": "Memorial in honor of Belarusian partisans — the largest partisan movement in Europe (374 thousand fighters).",
+    "5": "Memorial at the site of the mass execution of prisoners of the Minsk Ghetto — one of the world's first Holocaust memorials.",
+    "6": "Memorial complex at the site of tank battles on July 9-14, 1941, where Colonel Katukov's units stopped the advance of the 47th motorized corps.",
+    "7": "The tallest sculpture-statue in Europe (85 meters) — a symbol of the Battle of Stalingrad on Mamayev Kurgan.",
+    "8": "The largest memorial complex dedicated to the memory of 490,000 victims of the Siege of Leningrad.",
+    "9": "The largest memorial complex in Moscow — Central Museum of the Great Patriotic War with a 141.8 meter monument.",
+    "10": "Memorial at the site of fierce battles for the liberation of Sevastopol on May 7-9, 1944.",
+    "11": "The largest Soviet military memorial outside the former USSR — in memory of 80,000 Soviet soldiers who fell during the storming of Berlin.",
+    "12": "Memorial at the site of the first battles for Berlin in April 1945 near the Brandenburg Gate.",
+    "13": "Memorial at the site of the mass shootings of Jews and other groups of the population by the Nazis — one of the largest Holocaust sites (100,000-150,000 victims).",
+    "14": "The largest museum complex in Ukraine with the Motherland monument 62 meters high.",
+    "15": "Concentration camp and memorial — one of the first camps turned into a museum after liberation by the Red Army on July 23, 1944.",
+    "16": "The largest Nazi concentration camp — 1.1 million victims. Liberated by the Red Army on January 27, 1945.",
+    "17": "79-meter monument to Soviet soldiers who liberated Riga on October 13, 1944.",
+    "18": "67-meter monument to Soviet soldiers who fell during the liberation of Belgrade. The tallest unsupported statue in the world.",
+    "19": "Memorial in honor of the heroes who stopped German tanks at the Dubosekovo junction on November 28, 1941.",
+    "20": "Defense line of 1941 — fortified positions where the 316th division stopped the advance on Moscow."
+  },
+  "eventLocations": {
+    "1": "Moscow",
+    "2": "Moscow",
+    "3": "Leningrad",
+    "4": "Stalingrad",
+    "5": "Kursk Bulge",
+    "6": "Belarus",
+    "7": "Brest",
+    "8": "Kiev",
+    "9": "Dnieper",
+    "10": "Vienna",
+    "11": "Berlin",
+    "12": "Novorossiysk",
+    "13": "Sevastopol",
+    "14": "Leningrad",
+    "15": "Odessa",
+    "16": "Moscow, Red Square",
+    "17": "Ural, Sverdlovsk",
+    "18": "Berlin",
+    "19": "Rzhev",
+    "20": "Kursk",
+    "21": "Kursk Bulge",
+    "22": "Tula",
+    "23": "Stalino (Donetsk)",
+    "24": "Stalingrad",
+    "25": "Leningrad",
+    "26": "Murmansk",
+    "27": "Kharkov",
+    "28": "Orel",
+    "29": "Minsk",
+    "30": "Dnieper",
+    "31": "Kuban, Krasnodar",
+    "32": "Orel",
+    "33": "Demyansk",
+    "34": "Moscow",
+    "35": "Stalingrad",
+    "36": "Minsk",
+    "37": "Warsaw",
+    "38": "Primorye, Vladivostok",
+    "39": "Smolensk",
+    "40": "Berlin"
+  },
+  "monumentRegions": {
+    "1": "Brest Region",
+    "2": "Minsk Region",
+    "3": "Minsk Region",
+    "4": "Minsk Region",
+    "5": "Minsk",
+    "6": "Mogilev Region",
+    "7": "Volgograd Region",
+    "8": "St. Petersburg",
+    "9": "Moscow",
+    "10": "Sevastopol",
+    "11": "Berlin",
+    "12": "Berlin",
+    "13": "Kiev",
+    "14": "Kiev",
+    "15": "Lublin Voivodeship",
+    "16": "Lesser Poland Voivodeship",
+    "17": "Riga",
+    "18": "Belgrade",
+    "19": "Almaty",
+    "20": "Moscow Region"
+  },
+  "_buildTime": "1778006243"
+}
