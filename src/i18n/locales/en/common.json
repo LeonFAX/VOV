@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "home": "Home",
+    "timeline": "Timeline",
+    "heroes": "Heroes",
+    "letters": "Letters",
+    "events": "Events",
+    "monuments": "Monuments"
+  },
+  "language": {
+    "ru": "Русский",
+    "en": "English",
+    "be": "Беларуская",
+    "select": "Language"
+  },
+  "actions": {
+    "search": "Search",
+    "searchPlaceholder": "Search...",
+    "resetFilters": "Reset filters",
+    "readMore": "Read more",
+    "showMore": "Show more",
+    "back": "Back",
+    "close": "Close",
+    "grid": "Grid",
+    "map": "Map"
+  },
+  "filters": {
+    "all": "All",
+    "allYears": "All years",
+    "allRegions": "All regions",
+    "byYear": "By year",
+    "byRegion": "By country",
+    "byType": "By type"
+  },
+  "stats": {
+    "events": "events",
+    "heroes": "heroes",
+    "letters": "letters",
+    "monuments": "monuments",
+    "period": "1941 — 1945",
+    "realPhotos": "With real photos"
+  },
+  "meta": {
+    "title": "The Great Patriotic War",
+    "subtitle": "Chronicle of Courage and Heroism. 1941–1945",
+    "description": "Interactive historical portal dedicated to the events of the Great Patriotic War, heroes, front-line letters and memorials of memory."
+  },
+  "footer": {
+    "copyright": "© 2025 The Great Patriotic War. All data verified.",
+    "privacy": "Privacy",
+    "admin": "Admin Panel",
+    "sections": "Sections",
+    "info": "Information",
+    "contact": "Contact"
+  }
+}
