@@ -1,0 +1,135 @@
+// src/pages/admin/HeroEditPage.tsx
+import { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Save, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useTranslation } from 'react-i18next';
+import { useContentStore } from '@/store';
+
+export function HeroEditPage() {
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const { t } = useTranslation('pages');
+  const { heroes, updateHero } = useContentStore();
+  
+  const hero = heroes.find(h => String(h.id) === String(id));
+  
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    middleName: '',
+    militaryRank: '',
+    biography: '',
+    feat: '',
+  });
+
+  useEffect(() => {
+    if (hero) {
+      setFormData({
+        firstName: hero.firstName,
+        lastName: hero.lastName,
+        middleName: hero.middleName || '',
+        militaryRank: hero.militaryRank,
+        biography: hero.biography,
+        feat: hero.feat,
+      });
+    }
+  }, [hero]);
+
+  if (!hero) {
+    return <div className="p-12 text-[#8A7D6E]">Герой не найден</div>;
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    updateHero(id!, {
+      ...formData,
+      updatedAt: new Date(),
+    });
+    navigate('/admin/heroes');
+  };
+
+  return (
+    <div className="min-h-screen py-12 bg-[#F5F0E8]">
+      <div className="max-w-[900px] mx-auto px-4">
+        <Button variant="ghost" onClick={() => navigate('/admin/heroes')} className="text-[#8A7D6E] mb-4">
+          <ArrowLeft className="w-4 h-4 mr-2" /> Назад
+        </Button>
+        
+        <h1 className="text-3xl font-bold text-[#2D2619] font-serif mb-8">
+          Редактирование: {hero.lastName} {hero.firstName}
+        </h1>
+
+        <div className="bg-white rounded-lg p-8 border border-[#E8DFD0]">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-3 gap-6">
+              <div>
+                <label className="block text-[#8A7D6E] text-sm mb-2">Фамилия</label>
+                <Input 
+                  className="bg-[#FAF8F4] border-[#E8DFD0] text-[#2D2619]"
+                  value={formData.lastName}
+                  onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
+                />
+              </div>
+              <div>
+                <label className="block text-[#8A7D6E] text-sm mb-2">Имя</label>
+                <Input 
+                  className="bg-[#FAF8F4] border-[#E8DFD0] text-[#2D2619]"
+                  value={formData.firstName}
+                  onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
+                />
+              </div>
+              <div>
+                <label className="block text-[#8A7D6E] text-sm mb-2">Отчество</label>
+                <Input 
+                  className="bg-[#FAF8F4] border-[#E8DFD0] text-[#2D2619]"
+                  value={formData.middleName}
+                  onChange={(e) => setFormData(prev => ({ ...prev, middleName: e.target.value }))}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[#8A7D6E] text-sm mb-2">Воинское звание</label>
+              <Input 
+                className="bg-[#FAF8F4] border-[#E8DFD0] text-[#2D2619]"
+                value={formData.militaryRank}
+                onChange={(e) => setFormData(prev => ({ ...prev, militaryRank: e.target.value }))}
+              />
+            </div>
+
+            <div>
+              <label className="block text-[#8A7D6E] text-sm mb-2">Биография</label>
+              <Textarea 
+                className="bg-[#FAF8F4] border-[#E8DFD0] text-[#2D2619] min-h-[120px]"
+                value={formData.biography}
+                onChange={(e) => setFormData(prev => ({ ...prev, biography: e.target.value }))}
+              />
+            </div>
+
+            <div>
+              <label className="block text-[#8A7D6E] text-sm mb-2">Подвиг</label>
+              <Textarea 
+                className="bg-[#FAF8F4] border-[#E8DFD0] text-[#2D2619] min-h-[120px]"
+                value={formData.feat}
+                onChange={(e) => setFormData(prev => ({ ...prev, feat: e.target.value }))}
+              />
+            </div>
+
+            <div className="flex gap-4 pt-4">
+              <Button type="submit" className="bg-[#8B6914] text-white hover:bg-[#7A5C10]">
+                <Save className="w-4 h-4 mr-2" /> Сохранить
+              </Button>
+              <Button type="button" variant="outline" onClick={() => navigate('/admin/heroes')} className="border-[#E8DFD0] text-[#8A7D6E]">
+                <X className="w-4 h-4 mr-2" /> Отмена
+              </Button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}

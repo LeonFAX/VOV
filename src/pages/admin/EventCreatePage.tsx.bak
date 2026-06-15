@@ -1,0 +1,203 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Save, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useTranslation } from 'react-i18next';
+import { useContentStore } from '@/store';
+import type { Event } from '@/types';
+
+export function EventCreatePage() {
+  const navigate = useNavigate();
+  const { t } = useTranslation('pages');
+  const { addEvent } = useContentStore();
+  
+  const [formData, setFormData] = useState({
+    title: '',
+    date: '',
+    endDate: '',
+    type: 'battle' as Event['type'],
+    description: '',
+    fullText: '',
+    location: '',
+    images: [''],
+    sources: [''],
+    slug: '',
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors(prev => { const newErrors = { ...prev }; delete newErrors[field]; return newErrors; });
+    }
+  };
+
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+    if (!formData.title.trim()) newErrors.title = 'Название обязательно';
+    if (!formData.date) newErrors.date = 'Дата обязательна';
+    if (!formData.description.trim()) newErrors.description = 'Описание обязательно';
+    if (!formData.slug.trim()) newErrors.slug = 'Slug обязателен';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const newEvent: Omit<Event, 'id' | 'createdAt' | 'updatedAt'> = {
+      title: formData.title,
+      date: new Date(formData.date),
+      endDate: formData.endDate ? new Date(formData.endDate) : undefined,
+      type: formData.type,
+      description: formData.description,
+      fullText: formData.fullText || formData.description,
+      location: formData.location || undefined,
+      images: formData.images.filter(i => i.trim()),
+      sources: formData.sources.filter(s => s.trim()),
+      slug: formData.slug,
+      relatedHeroes: [],
+    };
+
+    addEvent(newEvent as Omit<Event, 'id' | 'createdAt' | 'updatedAt'>);
+    navigate('/admin/events');
+  };
+
+  return (
+    <div className="min-h-screen py-12">
+      <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8"
+        >
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/admin/events')}
+            className="text-[#6A5D50] hover:text-[#D4C4A0] mb-4"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Назад к списку
+          </Button>
+          
+          <h1 className="text-3xl font-bold text-[#D4C4A0] font-serif">
+            Добавить событие
+          </h1>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-[#231E15] rounded-lg p-8 border border-[#3D3225]"
+        >
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label className="block text-[#6A5D50] text-sm mb-2">Название *</label>
+              <Input 
+                className={`bg-[#1A1612] border-[#3D3225] text-[#D4C4A0] ${errors.title ? 'border-[#DC2626]' : ''}`}
+                placeholder="Введите название события"
+                value={formData.title}
+                onChange={(e) => handleChange('title', e.target.value)}
+              />
+              {errors.title && <p className="text-[#DC2626] text-xs mt-1">{errors.title}</p>}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-[#6A5D50] text-sm mb-2">Дата начала *</label>
+                <Input 
+                  type="date"
+                  className={`bg-[#1A1612] border-[#3D3225] text-[#D4C4A0] ${errors.date ? 'border-[#DC2626]' : ''}`}
+                  value={formData.date}
+                  onChange={(e) => handleChange('date', e.target.value)}
+                />
+                {errors.date && <p className="text-[#DC2626] text-xs mt-1">{errors.date}</p>}
+              </div>
+              <div>
+                <label className="block text-[#6A5D50] text-sm mb-2">Дата окончания</label>
+                <Input 
+                  type="date"
+                  className="bg-[#1A1612] border-[#3D3225] text-[#D4C4A0]"
+                  value={formData.endDate}
+                  onChange={(e) => handleChange('endDate', e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[#6A5D50] text-sm mb-2">Тип события *</label>
+              <select
+                className="w-full bg-[#1A1612] border border-[#3D3225] text-[#D4C4A0] rounded-md px-3 py-2"
+                value={formData.type}
+                onChange={(e) => setFormData(prev => ({ ...prev, type: e.target.value as Event['type'] }))}
+              >
+                <option value="battle">Сражение</option>
+                <option value="operation">Операция</option>
+                <option value="political">Политическое событие</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-[#6A5D50] text-sm mb-2">Место</label>
+              <Input 
+                className="bg-[#1A1612] border-[#3D3225] text-[#D4C4A0]"
+                placeholder="Например: г. Минск"
+                value={formData.location}
+                onChange={(e) => handleChange('location', e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label className="block text-[#6A5D50] text-sm mb-2">Краткое описание *</label>
+              <Textarea 
+                className={`bg-[#1A1612] border-[#3D3225] text-[#D4C4A0] min-h-[80px] ${errors.description ? 'border-[#DC2626]' : ''}`}
+                placeholder="Введите краткое описание..."
+                value={formData.description}
+                onChange={(e) => handleChange('description', e.target.value)}
+              />
+              {errors.description && <p className="text-[#DC2626] text-xs mt-1">{errors.description}</p>}
+            </div>
+
+            <div>
+              <label className="block text-[#6A5D50] text-sm mb-2">Полный текст</label>
+              <Textarea 
+                className="bg-[#1A1612] border-[#3D3225] text-[#D4C4A0] min-h-[200px]"
+                placeholder="Введите полный текст статьи..."
+                value={formData.fullText}
+                onChange={(e) => handleChange('fullText', e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label className="block text-[#6A5D50] text-sm mb-2">Slug (URL-идентификатор) *</label>
+              <Input 
+                className={`bg-[#1A1612] border-[#3D3225] text-[#D4C4A0] ${errors.slug ? 'border-[#DC2626]' : ''}`}
+                placeholder="Например: battle-of-moscow"
+                value={formData.slug}
+                onChange={(e) => handleChange('slug', e.target.value)}
+              />
+              {errors.slug && <p className="text-[#DC2626] text-xs mt-1">{errors.slug}</p>}
+            </div>
+
+            <div className="flex items-center gap-4 pt-4">
+              <Button type="submit" className="bg-[#8B6914] text-[#D4C4A0] hover:bg-[#8B6914]/90">
+                <Save className="w-4 h-4 mr-2" />
+                Сохранить
+              </Button>
+              <Button type="button" variant="outline" onClick={() => navigate('/admin/events')} className="border-[#3D3225] text-[#6A5D50]">
+                <X className="w-4 h-4 mr-2" />
+                Отмена
+              </Button>
+            </div>
+          </form>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

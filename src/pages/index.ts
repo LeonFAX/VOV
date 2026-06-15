@@ -1,0 +1,17 @@
+export { HomePage } from './HomePage';
+export { HeroesPage } from './HeroesPage';
+export { HeroDetailPage } from './HeroDetailPage';
+export { LettersPage } from './LettersPage';
+export { LetterDetailPage } from './LetterDetailPage';
+export { EventsPage } from './EventsPage';
+export { EventDetailPage } from './EventDetailPage';
+export { MonumentsPage } from './MonumentsPage';
+export { MonumentDetailPage } from './MonumentDetailPage';
+export { TimelinePage } from './TimelinePage';
+export { SearchPage } from './SearchPage';
+export { AboutPage } from './AboutPage';
+export { LoginPage } from './LoginPage';
+export { AdminPage } from './AdminPage';
+export { SourcesPage } from './SourcesPage';
+export { PrivacyPage } from './PrivacyPage';
+export { ContactPage } from './ContactPage';
