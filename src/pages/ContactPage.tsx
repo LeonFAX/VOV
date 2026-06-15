@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { 
   Mail, MessageSquare, Send, User, AtSign, 
@@ -33,7 +32,6 @@ const EMAILJS_CONFIG = {
 const IMGBB_API_KEY = '775b9ff97a53334137a22cb096c88a9c'; // <-- ВСТАВЬ СЮДА КЛЮЧ
 
 export function ContactPage() {
-  const { t } = useTranslation();
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const [formData, setFormData] = useState<FormData>({
