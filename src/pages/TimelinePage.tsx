@@ -129,17 +129,17 @@ export function TimelinePage() {
     }
   };
 
-  const handleYearSelect = (year: number | null) => {
-    setSelectedYear(year);
-    if (year !== null) {
-      const endOfYear = year === 1945 ? END_DATE : new Date(`${year}-12-31`);
-      setSelectedDate(endOfYear);
-    } else {
-      setSelectedDate(START_DATE);
-    }
-    setActiveEvent(null);
-    setMapZoom(5);
-  };
+const handleYearSelect = (year: number | null) => {
+  setSelectedYear(year);
+  if (year !== null) {
+    const startOfYear = year === 1941 ? START_DATE : new Date(`${year}-01-01`);
+    setSelectedDate(startOfYear);
+  } else {
+    setSelectedDate(START_DATE);
+  }
+  setActiveEvent(null);
+  setMapZoom(5);
+};
 
   const getTypeStyle = (type: string) => {
     const colors = typeColors[type] || typeColors.other;
