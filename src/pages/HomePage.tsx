@@ -28,10 +28,10 @@ function StatCounter({ value, label, suffix = '' }: { value: number; label: stri
       transition={{ duration: 0.6 }}
       className="text-center"
     >
-      <div className="text-4xl md:text-5xl font-bold text-[#C4953A] mb-2 font-serif">
+      <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#C4953A] mb-2 font-serif">
         {count.toLocaleString('en-US')}{suffix}
       </div>
-      <p className="text-[#8A8178] text-sm">{label}</p>
+      <p className="text-[#8A8178] text-xs sm:text-sm">{label}</p>
     </motion.div>
   );
 }
@@ -50,7 +50,7 @@ function HeroSection() {
         />
         <div className="absolute inset-0 bg-[#1F1A16]/75" />
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
         <motion.div
@@ -59,43 +59,43 @@ function HeroSection() {
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
         >
           {/* Year Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#9B1B1B]/90 border border-[#9B1B1B] rounded-full px-4 py-2 mb-8">
-            <span className="text-white font-bold">1941 — 1945</span>
+          <div className="inline-flex items-center gap-2 bg-[#9B1B1B]/90 border border-[#9B1B1B] rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-6 sm:mb-8">
+            <span className="text-white font-bold text-sm sm:text-base">1941 — 1945</span>
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-serif leading-tight drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 font-serif leading-tight drop-shadow-lg px-2">
             {t('hero.title')}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-[#C4953A] mb-4 font-serif">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#C4953A] mb-3 sm:mb-4 font-serif px-4">
             {t('hero.subtitle')}
           </p>
 
           {/* Description */}
-          <p className="text-[#E8DFD4] text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-[#E8DFD4] text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-10 px-4">
             {t('hero.description')}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/timeline">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
+            <Link to="/timeline" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-[#C4953A] text-[#1F1A16] hover:bg-[#A67B3D] px-8 py-6 text-base font-semibold"
+                className="bg-[#C4953A] text-[#1F1A16] hover:bg-[#A67B3D] px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-semibold w-full sm:w-auto"
               >
-                <Calendar className="w-5 h-5 mr-2" />
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 {t('buttons.explore')}
               </Button>
             </Link>
-            <Link to="/heroes">
+            <Link to="/heroes" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/80 text-white bg-white/10 hover:bg-white/20 px-8 py-6 text-base backdrop-blur-sm"
+                className="border-white/80 text-white bg-white/10 hover:bg-white/20 px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base backdrop-blur-sm w-full sm:w-auto"
               >
-                <Users className="w-5 h-5 mr-2" />
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 {t('nav.heroes')}
               </Button>
             </Link>
@@ -108,7 +108,7 @@ function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -126,20 +126,19 @@ function HeroSection() {
 function StatsSection() {
   const { t } = useTranslation();
 
-
   return (
-    <section className="pt-8 pb-0 bg-[#FAF6F0]">
+    <section className="pt-6 sm:pt-8 pb-0 bg-[#FAF6F0]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <FadeInOnScroll>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1F1A16] mb-4 font-serif">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F1A16] mb-3 sm:mb-4 font-serif">
               {t('sections.stats')}
             </h2>
-            <div className="w-20 h-1 bg-[#C4953A] mx-auto" />
+            <div className="w-16 sm:w-20 h-1 bg-[#C4953A] mx-auto" />
           </div>
         </FadeInOnScroll>
 
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
           <StaggerItem><StatCounter value={1418} label={ 'Дней войны'} /></StaggerItem>
           <StaggerItem><StatCounter value={11600} label={'Героев СССР'} /></StaggerItem>
           <StaggerItem><StatCounter value={27000000} label={ 'Погибших'} /></StaggerItem>
@@ -162,22 +161,21 @@ function FeaturedHeroesSection() {
   }, [heroes]);
 
   return (
-    <section className="pt-8 pb-20 bg-white">
+    <section className="pt-6 sm:pt-8 pb-12 sm:pb-20 bg-white">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8 sm:mb-12">
           <FadeInOnScroll direction="left">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
                 {t('sections.featuredHeroes') || 'Легендарные герои'}
               </h2>
-              <div className="w-20 h-1 bg-[#C4953A]" />
-              
+              <div className="w-16 sm:w-20 h-1 bg-[#C4953A]" />
             </div>
           </FadeInOnScroll>
-          
+
           <FadeInOnScroll direction="right">
             <Link to="/heroes">
-              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10">
+              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10 text-sm sm:text-base">
                 {t('buttons.viewAll')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -185,7 +183,8 @@ function FeaturedHeroesSection() {
           </FadeInOnScroll>
         </div>
 
-        <div className={`grid gap-6 ${featuredHeroes.length >= 8 ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'}`}>
+        {/* FIXED: 1 column on mobile, 2 on sm, 3 on md, 4 on lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {featuredHeroes.map((hero, index) => (
             <HeroCard key={hero.id} hero={hero} index={index} />
           ))}
@@ -201,21 +200,21 @@ function LatestEventsSection() {
   const featuredEvents = events.slice(0, 3);
 
   return (
-    <section className="pt-20 pb-0 bg-[#FAF6F0]">
+    <section className="pt-12 sm:pt-20 pb-0 bg-[#FAF6F0]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8 sm:mb-12">
           <FadeInOnScroll direction="left">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
                 {t('sections.events')}
               </h2>
-              <div className="w-20 h-1 bg-[#C4953A]" />
+              <div className="w-16 sm:w-20 h-1 bg-[#C4953A]" />
             </div>
           </FadeInOnScroll>
-          
+
           <FadeInOnScroll direction="right">
             <Link to="/events">
-              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10">
+              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10 text-sm sm:text-base">
                 {t('buttons.viewAll')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -223,7 +222,7 @@ function LatestEventsSection() {
           </FadeInOnScroll>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {featuredEvents.map((event, index) => (
             <EventCard key={event.id} event={event} index={index} />
           ))}
@@ -239,21 +238,21 @@ function LatestLettersSection() {
   const featuredLetters = letters.slice(0, 3);
 
   return (
-    <section className="pt-8 pb-20 bg-white">
+    <section className="pt-6 sm:pt-8 pb-12 sm:pb-20 bg-white">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8 sm:mb-12">
           <FadeInOnScroll direction="left">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
                 {t('sections.letters')}
               </h2>
-              <div className="w-20 h-1 bg-[#C4953A]" />
+              <div className="w-16 sm:w-20 h-1 bg-[#C4953A]" />
             </div>
           </FadeInOnScroll>
-          
+
           <FadeInOnScroll direction="right">
             <Link to="/letters">
-              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10">
+              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10 text-sm sm:text-base">
                 {t('buttons.viewAll')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -261,7 +260,7 @@ function LatestLettersSection() {
           </FadeInOnScroll>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {featuredLetters.map((letter, index) => (
             <LetterCard key={letter.id} letter={letter} index={index} />
           ))}
@@ -277,21 +276,21 @@ function MonumentsPreviewSection() {
   const featuredMonuments = monuments.slice(0, 4);
 
   return (
-    <section className="pt-8 pb-20 bg-[#FAF6F0]">
+    <section className="pt-6 sm:pt-8 pb-12 sm:pb-20 bg-[#FAF6F0]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8 sm:mb-12">
           <FadeInOnScroll direction="left">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F1A16] mb-2 font-serif">
                 {t('sections.monuments')}
               </h2>
-              <div className="w-20 h-1 bg-[#C4953A]" />
+              <div className="w-16 sm:w-20 h-1 bg-[#C4953A]" />
             </div>
           </FadeInOnScroll>
-          
+
           <FadeInOnScroll direction="right">
             <Link to="/monuments">
-              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10">
+              <Button variant="ghost" className="text-[#C4953A] hover:text-[#1F1A16] hover:bg-[#C4953A]/10 text-sm sm:text-base">
                 {t('buttons.viewAll')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -299,7 +298,7 @@ function MonumentsPreviewSection() {
           </FadeInOnScroll>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {featuredMonuments.map((monument, index) => (
             <MonumentCard key={monument.id} monument={monument} index={index} />
           ))}
@@ -311,7 +310,7 @@ function MonumentsPreviewSection() {
 
 /* Smooth gradient transitions between sections with different backgrounds */
 function SectionTransition({ from, to }: { from: string; to: string }) {
-  return <div className={`h-12 bg-gradient-to-b ${from} ${to}`} />;
+  return <div className={`h-8 sm:h-12 bg-gradient-to-b ${from} ${to}`} />;
 }
 
 export function HomePage() {
