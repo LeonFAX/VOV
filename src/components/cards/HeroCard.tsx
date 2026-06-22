@@ -26,8 +26,6 @@ export function HeroCard({ hero, index = 0 }: HeroCardProps) {
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.4, 0, 0.2, 1] }}
       className="relative group"
     >
-      
-
       <Link to={`/heroes/${hero.slug}`}>
         <div className="bg-white rounded-lg overflow-hidden border border-[#E8DFD4] hover:border-[#C4953A]/50 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl">
           {/* Gold top stripe */}
@@ -44,78 +42,83 @@ export function HeroCard({ hero, index = 0 }: HeroCardProps) {
 
             {/* Awards Badge */}
             {hero.awards.length > 0 && (
-              <div className="absolute top-3 right-3 flex items-center gap-1 bg-[#9B1B1B]/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
+              <div className="absolute top-2 sm:top-3 right-2 sm:right-3 flex items-center gap-1 bg-[#9B1B1B]/90 backdrop-blur-sm px-2 py-1 rounded-full">
                 <Award className="w-3 h-3 text-[#C4953A]" />
-                <span className="text-white text-xs font-medium">{hero.awards.length}</span>
+                <span className="text-white text-[10px] sm:text-xs font-medium">{hero.awards.length}</span>
               </div>
             )}
 
             {/* Subtle star */}
-            <div className="absolute bottom-3 left-3 opacity-30">
-              <Star className="w-4 h-4 text-[#9B1B1B] fill-[#9B1B1B]" />
+            <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 opacity-30">
+              <Star className="w-3 h-3 sm:w-4 sm:h-4 text-[#9B1B1B] fill-[#9B1B1B]" />
             </div>
           </div>
 
           {/* Content */}
-          <div className="p-4">
-            <div className="flex items-center gap-2 mb-1">
+          <div className="p-2 sm:p-4">
+            {/* Name — smaller on mobile, allow wrapping */}
+            <div className="flex items-start gap-1.5 sm:gap-2 mb-1">
               {hero.awards.some(a => (typeof a === 'string' ? a : a?.name)?.toLowerCase().includes('герой') || (typeof a === 'string' ? a : a?.name)?.toLowerCase().includes('hero')) && (
-                <Star className="w-4 h-4 text-[#9B1B1B] fill-[#9B1B1B] flex-shrink-0" />
+                <Star className="w-3 h-3 sm:w-4 sm:h-4 text-[#9B1B1B] fill-[#9B1B1B] flex-shrink-0 mt-0.5" />
               )}
-              <h3 className="text-[#1F1A16] font-semibold text-lg group-hover:text-[#C4953A] transition-colors duration-300">
+              <h3 className="text-[#1F1A16] font-semibold text-sm sm:text-base md:text-lg group-hover:text-[#C4953A] transition-colors duration-300 leading-tight break-words">
                 {fullName}
               </h3>
             </div>
 
-            <p className="text-[#C4953A] text-sm font-medium mb-3 tracking-wide">
+            {/* Rank — smaller, no tracking on mobile */}
+            <p className="text-[#C4953A] text-xs sm:text-sm font-medium mb-2 sm:mb-3 sm:tracking-wide">
               {hero.militaryRank}
             </p>
 
-            <div className="flex flex-wrap gap-2 text-[#8A8178] text-xs">
+            {/* Dates & Place — compact on mobile */}
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-1 sm:gap-2 text-[#8A8178] text-[10px] sm:text-xs">
               {hero.birthDate && (
                 <div className="flex items-center gap-1">
-                  <Calendar className="w-3 h-3 text-[#C4953A]" />
-                  <span>{hero.birthDate.getFullYear()} — {hero.deathDate ? hero.deathDate.getFullYear() : t('heroes.present')}</span>
+                  <Calendar className="w-3 h-3 text-[#C4953A] flex-shrink-0" />
+                  <span className="whitespace-nowrap">
+                    {hero.birthDate.getFullYear()} — {hero.deathDate ? hero.deathDate.getFullYear() : t('heroes.present')}
+                  </span>
                 </div>
               )}
               {hero.birthPlace && (
-                <div className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[#9B1B1B]" />
-                  <span className="truncate max-w-[150px]">{hero.birthPlace}</span>
+                <div className="flex items-center gap-1 min-w-0">
+                  <MapPin className="w-3 h-3 text-[#9B1B1B] flex-shrink-0" />
+                  <span className="truncate">{hero.birthPlace}</span>
                 </div>
               )}
             </div>
 
-            {/* Awards Preview */}
+            {/* Awards Preview — scrollable on mobile */}
             {hero.awards.length > 0 && (
-              <div className="mt-3 pt-3 border-t border-[#E8DFD4]">
-                <div className="flex flex-wrap gap-1.5">
+              <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-[#E8DFD4]">
+                <div className="flex gap-1 sm:gap-1.5 overflow-x-auto scrollbar-hide pb-1 sm:flex-wrap sm:overflow-visible">
                   {hero.awards.slice(0, 4).map((award, i) => (
                     <Tooltip key={i} delayDuration={100}>
                       <TooltipTrigger asChild>
-                        <span className="inline-block bg-[#F5F0E8] text-[#6B5D4F] border border-[#E8DFD4] px-2 py-0.5 rounded text-[10px] cursor-help hover:bg-[#C4953A]/10 hover:border-[#C4953A]/30 transition-colors duration-300">
+                        <span className="inline-block bg-[#F5F0E8] text-[#6B5D4F] border border-[#E8DFD4] px-1.5 sm:px-2 py-0.5 rounded text-[9px] sm:text-[10px] cursor-help hover:bg-[#C4953A]/10 hover:border-[#C4953A]/30 transition-colors duration-300 whitespace-nowrap shrink-0">
                           {award.name}
                         </span>
                       </TooltipTrigger>
                       <TooltipContent
                         side="bottom"
                         sideOffset={6}
-                        className="bg-white text-[#1F1A16] border border-[#E8DFD4] max-w-[260px] p-0 shadow-xl overflow-hidden rounded-lg"
+                        className="bg-white text-[#1F1A16] border border-[#E8DFD4] max-w-[200px] sm:max-w-[260px] p-0 shadow-xl overflow-hidden rounded-lg"
                       >
-                        <div className="flex gap-3 p-3">
+                        <div className="flex gap-2 sm:gap-3 p-2 sm:p-3">
                           {award.image && (
-                            <img src={award.image} alt={award.name} className="w-16 h-16 object-contain flex-shrink-0" />
+                            <img src={award.image} alt={award.name} className="w-12 h-12 sm:w-16 sm:h-16 object-contain flex-shrink-0" />
                           )}
                           <div className="space-y-1 min-w-0">
-                            <p className="font-semibold text-[#C4953A] text-xs">{award.name}</p>
-                            <p className="text-[10px] text-[#8A8178] leading-relaxed">{award.description}</p>
+                            <p className="font-semibold text-[#C4953A] text-[10px] sm:text-xs">{award.name}</p>
+                            <p className="text-[9px] sm:text-[10px] text-[#8A8178] leading-relaxed">{award.description}</p>
                           </div>
                         </div>
                       </TooltipContent>
                     </Tooltip>
                   ))}
                   {hero.awards.length > 4 && (
-                    <span className="text-[#C4953A] text-[10px] px-1">+{hero.awards.length - 4}</span>
+                    <span className="text-[#C4953A] text-[9px] sm:text-[10px] px-1 shrink-0">+{hero.awards.length - 4}</span>
                   )}
                 </div>
               </div>
