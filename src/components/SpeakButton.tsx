@@ -11,6 +11,17 @@ interface SpeakButtonProps {
   variant?: 'primary' | 'secondary' | 'ghost';
 }
 
+// ← КЛЮЧЕВАЯ ФУНКЦИЯ: Разбудить speechSynthesis (Android Chrome требует это в обработчике)
+function unlockSpeechSynthesis() {
+  if (!window.speechSynthesis) return;
+  
+  // Android Chrome: resume + speak('') + cancel прямо в момент взаимодействия
+  window.speechSynthesis.resume?.();
+  const dummy = new SpeechSynthesisUtterance('');
+  window.speechSynthesis.speak(dummy);
+  window.speechSynthesis.cancel();
+}
+
 export function SpeakButton({
   text,
   label,
@@ -48,13 +59,15 @@ export function SpeakButton({
   };
 
   const handleClick = () => {
+    // ← КЛЮЧЕВОЙ ФИКС: Будим synthesis ПРЯМО В ОБРАБОТЧИКЕ КЛИКА
+    unlockSpeechSynthesis();
+
     if (isActive) {
       stop();
       setLocalSpeaking(false);
     } else {
       setLocalSpeaking(true);
       speak(text);
-      // Fallback: сброс через 15 секунд
       setTimeout(() => setLocalSpeaking(false), 15000);
     }
   };
@@ -102,6 +115,7 @@ export function SpeakOnHover({
 
   const handleMouseEnter = () => {
     if (isScreenReaderMode && text) {
+      unlockSpeechSynthesis(); // ← тоже будим здесь
       speak(text);
     }
   };

@@ -62,7 +62,6 @@ export function ScreenReaderOverlay() {
   const lastElementRef = useRef<string>('');
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // ЛОГ при монтировании и изменении режима
   useEffect(() => {
     console.log('[ScreenReaderOverlay] Mounted, isScreenReaderMode:', isScreenReaderMode);
   }, [isScreenReaderMode]);
@@ -81,7 +80,6 @@ export function ScreenReaderOverlay() {
       return;
     }
 
-    // Пропускаем панель доступности и скрытые элементы
     if (target.closest('.accessibility-panel')) {
       console.log('[ScreenReader] Skipping accessibility-panel element');
       return;
@@ -108,13 +106,11 @@ export function ScreenReaderOverlay() {
 
     lastElementRef.current = description;
 
-    // Отменяем предыдущий таймер
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
     }
 
-    // Озвучиваем сразу без задержки для теста
     console.log('[ScreenReader] Calling speak() for:', description);
     speak(description);
     console.log('[ScreenReader] isSpeaking after speak:', isSpeaking);
@@ -143,6 +139,23 @@ export function ScreenReaderOverlay() {
     }
   }, [isScreenReaderMode, speak]);
 
+  // ← ДОБАВЛЕНО: Touch events для мобильных
+  const handleTouchStart = useCallback((e: TouchEvent) => {
+    console.log('[ScreenReader] touchstart fired');
+    if (!isScreenReaderMode) return;
+
+    const target = e.target as HTMLElement;
+    if (!target) return;
+    if (target.closest('.accessibility-panel')) return;
+    if (target.closest('[aria-hidden="true"]')) return;
+
+    const description = getElementDescription(target);
+    if (description && description !== lastElementRef.current) {
+      lastElementRef.current = description;
+      speak(description);
+    }
+  }, [isScreenReaderMode, speak]);
+
   useEffect(() => {
     console.log('[ScreenReaderOverlay] Setting up listeners, isScreenReaderMode:', isScreenReaderMode);
 
@@ -155,15 +168,18 @@ export function ScreenReaderOverlay() {
     document.addEventListener('mouseover', handleMouseOver, true);
     document.addEventListener('mouseout', handleMouseOut, true);
     document.addEventListener('focus', handleFocus, true);
+    // ← ДОБАВЛЕНО: Touch events
+    document.addEventListener('touchstart', handleTouchStart, true);
 
     return () => {
       console.log('[ScreenReaderOverlay] Cleaning up listeners');
       document.removeEventListener('mouseover', handleMouseOver, true);
       document.removeEventListener('mouseout', handleMouseOut, true);
       document.removeEventListener('focus', handleFocus, true);
+      document.removeEventListener('touchstart', handleTouchStart, true);
       if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     };
-  }, [isScreenReaderMode, handleMouseOver, handleMouseOut, handleFocus]);
+  }, [isScreenReaderMode, handleMouseOver, handleMouseOut, handleFocus, handleTouchStart]);
 
   return null;
 }
