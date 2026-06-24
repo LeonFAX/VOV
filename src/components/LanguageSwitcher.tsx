@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
-import { createPortal } from 'react-dom'; // ← добавить
+import { useState, useRef, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 
 const languages = [
   { code: 'ru', label: 'Русский', flag: '🇷🇺' },
@@ -13,13 +13,19 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0, width: 0 });
+  const dropdownRef = useRef<HTMLDivElement>(null); // ← ref для dropdown
+  const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0 });
 
   const currentLang = languages.find(l => l.code === i18n.language) || languages[0];
 
+  // ← ИСПРАВЛЕНО: Проверяем оба ref — trigger и dropdown
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
+      const target = e.target as Node;
+      const clickedTrigger = ref.current && ref.current.contains(target);
+      const clickedDropdown = dropdownRef.current && dropdownRef.current.contains(target);
+      
+      if (!clickedTrigger && !clickedDropdown) {
         setOpen(false);
       }
     }
@@ -27,19 +33,30 @@ export function LanguageSwitcher() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Вычисляем позицию dropdown при открытии
-  useEffect(() => {
-    if (open && ref.current) {
+  const updatePosition = useCallback(() => {
+    if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
       setDropdownPos({
-        top: rect.bottom + window.scrollY + 4,
-        left: rect.left + window.scrollX,
-        width: Math.max(rect.width, 140),
+        top: rect.bottom + 8,
+        left: rect.left,
       });
     }
-  }, [open]);
+  }, []);
+
+  useEffect(() => {
+    if (open) {
+      updatePosition();
+      window.addEventListener('scroll', updatePosition, true);
+      window.addEventListener('resize', updatePosition);
+      return () => {
+        window.removeEventListener('scroll', updatePosition, true);
+        window.removeEventListener('resize', updatePosition);
+      };
+    }
+  }, [open, updatePosition]);
 
   const switchLang = (code: string) => {
+    console.log('Switching to:', code); // ← для отладки
     i18n.changeLanguage(code);
     setOpen(false);
   };
@@ -57,25 +74,25 @@ export function LanguageSwitcher() {
 
       {open && createPortal(
         <div 
-          className="fixed bg-[#1C1810] border border-[#3D3225] rounded-sm shadow-xl overflow-hidden z-[9999] min-w-[140px]"
+          ref={dropdownRef} // ← ref для проверки клика
+          className="fixed bg-[#1C1810] border border-[#3D3225] rounded-sm shadow-xl overflow-hidden z-[9999] min-w-[160px]"
           style={{
             top: `${dropdownPos.top}px`,
             left: `${dropdownPos.left}px`,
-            width: `${dropdownPos.width}px`,
           }}
         >
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => switchLang(lang.code)}
-              className={`w-full text-left px-3 py-2 text-sm transition-colors hover:bg-[#3D3225]/50 ${
+              className={`w-full text-left px-3 py-2.5 text-sm transition-colors hover:bg-[#3D3225]/50 flex items-center gap-2 ${
                 i18n.language === lang.code
                   ? 'text-[#C9A86A] bg-[#3D3225]/30'
                   : 'text-[#A09080]'
               }`}
             >
-              <span className="mr-2">{lang.flag}</span>
-              {lang.label}
+              <span>{lang.flag}</span>
+              <span>{lang.label}</span>
             </button>
           ))}
         </div>,
