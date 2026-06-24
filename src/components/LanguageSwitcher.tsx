@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom'; // ← добавить
 
 const languages = [
   { code: 'ru', label: 'Русский', flag: '🇷🇺' },
@@ -12,6 +13,7 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0, width: 0 });
 
   const currentLang = languages.find(l => l.code === i18n.language) || languages[0];
 
@@ -24,6 +26,18 @@ export function LanguageSwitcher() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Вычисляем позицию dropdown при открытии
+  useEffect(() => {
+    if (open && ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      setDropdownPos({
+        top: rect.bottom + window.scrollY + 4,
+        left: rect.left + window.scrollX,
+        width: Math.max(rect.width, 140),
+      });
+    }
+  }, [open]);
 
   const switchLang = (code: string) => {
     i18n.changeLanguage(code);
@@ -41,8 +55,15 @@ export function LanguageSwitcher() {
         <span className="text-xs font-medium uppercase">{currentLang.code}</span>
       </button>
 
-      {open && (
-        <div className="absolute right-0 top-full mt-1 bg-[#1C1810] border border-[#3D3225] rounded-sm shadow-xl overflow-hidden z-50 min-w-[140px]">
+      {open && createPortal(
+        <div 
+          className="fixed bg-[#1C1810] border border-[#3D3225] rounded-sm shadow-xl overflow-hidden z-[9999] min-w-[140px]"
+          style={{
+            top: `${dropdownPos.top}px`,
+            left: `${dropdownPos.left}px`,
+            width: `${dropdownPos.width}px`,
+          }}
+        >
           {languages.map((lang) => (
             <button
               key={lang.code}
@@ -57,7 +78,8 @@ export function LanguageSwitcher() {
               {lang.label}
             </button>
           ))}
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
