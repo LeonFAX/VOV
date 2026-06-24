@@ -65,6 +65,7 @@ export function SpeechProvider({ children }: { children: React.ReactNode }) {
   const [selectedVoice, setSelectedVoiceState] = useState<SpeechSynthesisVoice | null>(null);
   const [settings, setSettings] = useState<SpeechSettings>(loadSavedSettings);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const synthUnlocked = useRef(false); // ← НОВОЕ: отслеживаем разблокировку
 
   const updateSettings = useCallback((partial: Partial<SpeechSettings>) => {
     setSettings((prev) => {
@@ -91,6 +92,30 @@ export function SpeechProvider({ children }: { children: React.ReactNode }) {
     loadVoices();
     window.speechSynthesis?.addEventListener('voiceschanged', loadVoices);
     return () => window.speechSynthesis?.removeEventListener('voiceschanged', loadVoices);
+  }, []);
+
+  // ← НОВОЕ: Разблокировка speechSynthesis для мобильных
+  useEffect(() => {
+    const unlockSynth = () => {
+      if (!synthUnlocked.current && window.speechSynthesis) {
+        // iOS Safari требует resume() или speak() пустой строки для активации
+        window.speechSynthesis.resume?.();
+        // Некоторые браузеры требуют speak() для полной активации
+        const dummy = new SpeechSynthesisUtterance('');
+        window.speechSynthesis.speak(dummy);
+        window.speechSynthesis.cancel(); // сразу отменяем
+        synthUnlocked.current = true;
+      }
+    };
+
+    // Разблокируем по первому клику/тачу
+    document.addEventListener('click', unlockSynth, { once: true });
+    document.addEventListener('touchstart', unlockSynth, { once: true });
+    
+    return () => {
+      document.removeEventListener('click', unlockSynth);
+      document.removeEventListener('touchstart', unlockSynth);
+    };
   }, []);
 
   const setSelectedVoice = useCallback((voice: SpeechSynthesisVoice | null) => {
@@ -157,6 +182,13 @@ export function SpeechProvider({ children }: { children: React.ReactNode }) {
   const speak = useCallback(
     (text: string) => {
       if (!text || !window.speechSynthesis) return;
+
+      // ← НОВОЕ: Разблокировка перед каждым speak() на мобильных
+      if (!synthUnlocked.current) {
+        window.speechSynthesis.resume?.();
+        synthUnlocked.current = true;
+      }
+
       window.speechSynthesis.cancel();
 
       const utterance = new SpeechSynthesisUtterance(text);
@@ -171,10 +203,18 @@ export function SpeechProvider({ children }: { children: React.ReactNode }) {
 
       utterance.onstart = () => setIsSpeaking(true);
       utterance.onend = () => setIsSpeaking(false);
-      utterance.onerror = () => setIsSpeaking(false);
+      utterance.onerror = (e) => {
+        console.error('Speech synthesis error:', e.error);
+        setIsSpeaking(false);
+      };
 
       utteranceRef.current = utterance;
+      
+      // ← НОВОЕ: Двойной вызов speak() для iOS Safari (известный workaround)
       window.speechSynthesis.speak(utterance);
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
     },
     [i18n.language, getVoice, settings]
   );
