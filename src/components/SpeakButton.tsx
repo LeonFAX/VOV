@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import { useSpeechContext } from '@/contexts/SpeechContext';
 import { cn } from '@/lib/utils';
@@ -18,8 +19,9 @@ export function SpeakButton({
   variant = 'primary',
 }: SpeakButtonProps) {
   const { speak, stop, isSpeaking } = useSpeechContext();
+  const [localSpeaking, setLocalSpeaking] = useState(false);
 
-  const isActive = isSpeaking;
+  const isActive = isSpeaking || localSpeaking;
 
   const sizeClasses = {
     sm: 'px-2 py-1 text-xs gap-1',
@@ -48,10 +50,18 @@ export function SpeakButton({
   const handleClick = () => {
     if (isActive) {
       stop();
+      setLocalSpeaking(false);
     } else {
+      setLocalSpeaking(true);
       speak(text);
+      // Fallback: сброс через 15 секунд
+      setTimeout(() => setLocalSpeaking(false), 15000);
     }
   };
+
+  useEffect(() => {
+    if (!isSpeaking) setLocalSpeaking(false);
+  }, [isSpeaking]);
 
   return (
     <button
@@ -78,7 +88,7 @@ export function SpeakButton({
   );
 }
 
-// Screen reader hover wrapper — speaks on mouse enter when screen reader mode is on
+// Screen reader hover wrapper
 export function SpeakOnHover({
   children,
   text,
